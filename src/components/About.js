@@ -1,6 +1,6 @@
 const About = () => {
   return (
-    <div className="about u-max-width-small">
+    <div id="about" className="about u-max-width-small">
       <h2 className="heading-secondary">About me.</h2>
       <div className="about__video">
         <div className="container">

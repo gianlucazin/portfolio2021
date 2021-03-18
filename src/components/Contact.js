@@ -1,6 +1,6 @@
 const Contact = () => {
   return (
-    <div className="contact">
+    <div id="contact" className="contact">
       <div className="contact__wave">
         <svg
           data-name="Layer 1"

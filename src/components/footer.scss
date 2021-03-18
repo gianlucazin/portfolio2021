@@ -1,0 +1,51 @@
+.footer {
+  height: 30vh;
+  background-color: $color-primary;
+  position: relative;
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  &__list {
+    max-width: 100rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    justify-content: center;
+    align-items: center;
+  }
+  &__item {
+    text-align: center;
+    list-style: none;
+  }
+  &__link {
+    display: inline-block;
+    text-decoration: none;
+    font-size: $label-font-size;
+    color: $color-font-light;
+  }
+
+  &__logo {
+    list-style: none;
+    text-align: center;
+  }
+
+  &__img {
+    width: 12rem;
+    display: block;
+    margin-bottom: 2rem;
+  }
+
+  &__name {
+    color: $color-font-light;
+    font-size: 2rem;
+  }
+
+  &__copyright {
+    color: $color-font-light;
+    font-size: 1.2rem;
+  }
+}
