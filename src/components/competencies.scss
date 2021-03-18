@@ -1,0 +1,14 @@
+.competencies {
+  background-color: $color-secondary;
+  color: $color-font-light;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .paragraph:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+
+  br {
+  }
+}
