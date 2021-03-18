@@ -1,0 +1,50 @@
+.projects {
+  background-color: $color-background-desk;
+  overflow: hidden;
+
+  &__wave {
+    // overflow: hidden;
+    position: relative;
+    z-index: 1;
+    transform: rotate(180deg);
+    svg {
+      position: relative;
+      display: block;
+      width: calc(161% + 1.3px);
+      height: 255px;
+    }
+  }
+  &__wave-fill {
+    fill: $color-secondary;
+  }
+
+  &__desk {
+    margin-top: 30rem;
+    position: relative;
+    height: 100vh;
+    background-color: $color-background-desk;
+  }
+
+  &__img-desk {
+    // margin-top: -70rem;
+    // width: 80%;
+    position: absolute;
+    bottom: 0;
+  }
+
+  &__controls {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__select {
+    margin-right: -16rem;
+    display: flex;
+    align-items: center;
+    .paragraph {
+      margin-right: 2rem;
+    }
+  }
+}
