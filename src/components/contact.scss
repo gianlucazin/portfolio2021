@@ -1,0 +1,75 @@
+.contact {
+  padding-bottom: 10rem;
+  background-color: $color-secondary;
+  &__wave {
+    background-color: $color-tertiary;
+    // overflow: hidden;
+    position: relative;
+    z-index: 1;
+    transform: scaleX(-1);
+    svg {
+      position: relative;
+      display: block;
+      width: calc(161% + 1.3px);
+      height: 255px;
+    }
+  }
+
+  &__wave-fill {
+    fill: $color-secondary;
+  }
+
+  &__form {
+    color: $color-font-light;
+    // background-color: green;
+  }
+  &__label {
+    font-size: 1.6rem;
+    width: 100%;
+    display: block;
+    margin-bottom: 2.5rem;
+  }
+
+  &__input,
+  &__text-area {
+    margin-top: 2rem;
+    width: 100%;
+    display: block;
+    border-radius: 1rem;
+    padding: 2rem;
+    border: none;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__input {
+    height: 5rem;
+  }
+
+  &__text-area {
+    min-height: 22rem;
+    margin-bottom: 5rem;
+  }
+
+  &__btn {
+    width: 100%;
+    height: 5rem;
+    background-color: $color-accent-2;
+    color: $color-font-light;
+    font-size: 1.6rem;
+    font-family: $p-font-family;
+    border-radius: 1rem;
+    border: none;
+    box-shadow: $btn-shadow-normal;
+    cursor: pointer;
+    transition: all 0.3s;
+
+    &:hover,
+    &:active {
+      transform: scale(0.99);
+      box-shadow: $btn-shadow-pressed;
+    }
+  }
+}
