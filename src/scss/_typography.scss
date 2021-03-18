@@ -26,7 +26,7 @@ body {
 .heading-secondary {
   font-family: $h2-font-family;
   font-size: $h2-font-size;
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
   // letter-spacing: 2px;
 }
 
@@ -38,6 +38,7 @@ body {
 .paragraph {
   font-family: $p-font-family;
   font-size: $p-font-size;
+  line-height: 2;
   // &:not(:last-child) {
   //   margin-bottom: 3rem;
   // }

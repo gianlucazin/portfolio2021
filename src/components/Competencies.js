@@ -1,6 +1,6 @@
 const Competencies = () => {
   return (
-    <div className="competencies ">
+    <div id="competencies" className="competencies ">
       <div className="container u-max-width-small">
         <h2 className="heading-secondary">Competencies.</h2>
         <p className="paragraph">

@@ -8,15 +8,15 @@ const Intro = () => {
       <h1 className="heading-primary">Gianluca Zin</h1>
       <p className="paragraph">Fullstack Developer & UI/UX Designer</p>
       <div className="intro__nav">
-        <a href="" className="intro__link heading-tertiary">
+        <a href="#about" className="intro__link heading-tertiary">
           About
         </a>
         <b className="intro__dividers">/</b>
-        <a href="" className="intro__link heading-tertiary">
+        <a href="#projects" className="intro__link heading-tertiary">
           Projects
         </a>
         <b className="intro__dividers">/</b>
-        <a href="" className="intro__link heading-tertiary">
+        <a href="#contact" className="intro__link heading-tertiary">
           Contact
         </a>
       </div>

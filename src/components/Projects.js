@@ -3,7 +3,7 @@ import ButtonRnd from './ButtonRnd';
 
 const Projects = () => {
   return (
-    <div className="projects">
+    <div id="projects" className="projects">
       <div className="projects__wave">
         <svg
           data-name="Layer 1"
