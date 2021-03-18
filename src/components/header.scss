@@ -1,0 +1,19 @@
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  .social {
+    margin: 2.5rem;
+    &__link {
+      color: $color-font-light;
+      &:not(:last-child) {
+        margin-right: 1.2rem;
+      }
+    }
+
+    ion-icon {
+      font-size: 20px;
+    }
+  }
+}

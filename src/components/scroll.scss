@@ -1,0 +1,28 @@
+.scroll {
+  position: absolute;
+  bottom: 3rem;
+  // left: 50%;
+  // transform: translateX(50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__mouse {
+    position: relative;
+    width: 20px;
+    height: 38px;
+    border-radius: 13px;
+    border: 1px solid $color-tertiary;
+    margin-bottom: 1rem;
+  }
+
+  &__wheel {
+    position: absolute;
+    background-color: $color-accent-1;
+    width: 6px;
+    height: 11px;
+    border-radius: 13px;
+    top: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}

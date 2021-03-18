@@ -1,0 +1,49 @@
+// Local font
+@font-face {
+  font-family: 'Slenco';
+  src: url('../fonts/SlencoBlack.otf') format('opentype'); /* IE6-IE8 */
+}
+
+// Google font
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital@0;1&display=swap');
+
+body {
+  font-family: $p-font-family;
+  line-height: 1.5;
+  color: $color-font-dark;
+}
+
+.heading-primary {
+  font-family: $h1-font-family;
+  font-size: $h1-font-size;
+
+  // @include respond(tab-port) {
+  //   font-size: 5rem;
+  //   line-height: normal;
+  // }
+}
+
+.heading-secondary {
+  font-family: $h2-font-family;
+  font-size: $h2-font-size;
+  margin-bottom: 1.5rem;
+  // letter-spacing: 2px;
+}
+
+.heading-tertiary {
+  font-family: $h3-font-family;
+  font-size: $h3-font-size;
+}
+
+.paragraph {
+  font-family: $p-font-family;
+  font-size: $p-font-size;
+  // &:not(:last-child) {
+  //   margin-bottom: 3rem;
+  // }
+}
+
+.label {
+  font-family: $label-font-family;
+  font-size: $label-font-size;
+}
