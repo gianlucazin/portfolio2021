@@ -1,0 +1,13 @@
+.development {
+  margin-top: 4rem;
+  margin-bottom: 8rem;
+  &__title {
+    display: flex;
+    align-items: center;
+
+    ion-icon {
+      margin-right: 1rem;
+      font-size: 2rem;
+    }
+  }
+}
