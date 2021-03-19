@@ -8,18 +8,22 @@ import Competencies from './components/Competencies';
 import About from './components/About';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import ProjectPg from './components/ProjectPg';
+
+import { projectsData } from './json/data.js';
 
 const App = () => {
   return (
     <div>
-      <Header />
+      <ProjectPg projectData={projectsData[0]} />
+      {/* <Header />
       <Intro />
       <Mission />
       <Projects />
       <Competencies />
       <About />
       <Contact />
-      <Footer />
+      <Footer /> */}
     </div>
   );
 };
