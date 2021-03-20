@@ -9,9 +9,9 @@ const ProjectPg = ({ projectData }) => {
   return (
     <div>
       <Header />
-      <Introduction projectData={projectData} />
-      <Gallery title="Screenshots" />
-      <Gallery title="Design" />
+      <Introduction projectData={projectData.overview} />
+      <Gallery title="Screenshots" images={projectData.screenshots} />
+      <Gallery title="Design" images={projectData.design} />
       <Development />
       <Contact />
       <Footer />
