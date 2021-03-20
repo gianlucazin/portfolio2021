@@ -3,9 +3,12 @@
 @import './typography';
 @import './utilities';
 
+// Layout
+@import '../layout/header.scss';
+@import '../layout/footer.scss';
+
 // Components
 @import '../components/intro.scss';
-@import '../components/header.scss';
 @import '../components/scroll.scss';
 @import '../components/mission.scss';
 @import '../components/projects.scss';
@@ -14,7 +17,6 @@
 @import '../components/competencies.scss';
 @import '../components/about.scss';
 @import '../components/contact.scss';
-@import '../components/footer.scss';
 @import '../components/introduction.scss';
 @import '../components/gallery.scss';
 @import '../components/development.scss';

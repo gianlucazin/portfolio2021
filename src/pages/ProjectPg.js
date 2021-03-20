@@ -1,9 +1,9 @@
-import Header from './Header';
-import Introduction from './Introduction';
-import Gallery from './Gallery';
-import Contact from './Contact';
-import Footer from './Footer';
-import Development from './Development';
+import Header from '../layout/Header';
+import Introduction from '../components/Introduction';
+import Gallery from '../components/Gallery';
+import Contact from '../components/Contact';
+import Footer from '../layout/Footer';
+import Development from '../components/Development';
 
 const ProjectPg = ({ projectData }) => {
   return (

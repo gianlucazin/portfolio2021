@@ -22,10 +22,10 @@ const Projects = () => {
           <h2 className="heading-secondary ">Selected Projects.</h2>
           <div className="projects__select">
             <p className="paragraph">Select:</p>
-            <ButtonRnd value="1" />
-            <ButtonRnd value="2" />
-            <ButtonRnd value="3" />
-            <ButtonRnd value="4" />
+            <ButtonRnd value="1" projectName="passepartout" />
+            <ButtonRnd value="2" projectName="srtendaggi" />
+            <ButtonRnd value="3" projectName="hivenue" />
+            <ButtonRnd value="4" projectName="localrama" />
           </div>
         </div>
         <img src={desk} alt="" className="projects__img-desk" />

@@ -2,20 +2,29 @@
   width: 5rem;
   height: 5rem;
   border-radius: 100%;
-  background-color: $color-secondary;
   border: none;
   font-size: 1.6rem;
-  color: $color-font-light;
-  box-shadow: $btn-shadow-normal;
-  cursor: pointer;
-  &:not(:last-child) {
-    margin-right: 1rem;
-  }
   transition: all 0.3s;
+  color: $color-font-light;
+  text-decoration: none;
+  cursor: pointer;
+  text-align: center;
+  display: flex; // Enables flexbox
+  justify-content: center; // Center on main axis
+  align-items: center;
+
+  &:link,
+  &:visited {
+    background-color: $color-secondary;
+    box-shadow: $btn-shadow-normal;
+  }
 
   &:hover,
   &:active {
     transform: scale(0.96);
     box-shadow: $btn-shadow-pressed;
+  }
+  &:not(:last-child) {
+    margin-right: 1rem;
   }
 }
