@@ -3,9 +3,11 @@
   z-index: 10;
   top: 0;
   left: 0;
+  width: 100%;
 
   .social {
-    margin: 2.5rem;
+    margin: 3rem;
+    // width: fit-content;
     &__link {
       color: $color-font-light;
       &:not(:last-child) {

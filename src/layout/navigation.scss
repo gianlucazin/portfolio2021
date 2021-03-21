@@ -1,0 +1,135 @@
+.navigation {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: green;
+  width: 100%;
+  svg {
+    height: 80px;
+    position: absolute;
+    width: 80px;
+  }
+
+  &__x {
+    transform: scale(0);
+    transition: transform 400ms;
+  }
+  &__plate {
+    height: 80px;
+    width: 80px;
+    position: absolute;
+    top: 1rem;
+    right: 2rem;
+    z-index: 30;
+
+    &__x {
+      transition: transform 400ms;
+    }
+  }
+
+  &__burger {
+    filter: url(#gooeyness);
+  }
+
+  &__line {
+    fill: none;
+    stroke: $color-secondary;
+    stroke-width: 6px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    transform-origin: 50%;
+    transition: stroke-dasharray 500ms 200ms, stroke-dashoffset 500ms 200ms,
+      transform 500ms 200ms;
+
+    &__x {
+      stroke-width: 5.5px;
+    }
+  }
+
+  &__plate &__line {
+    transform-origin: 50%;
+    transition: transform 400ms 100ms;
+  }
+  &__plate.open &__line {
+    transition: transform 400ms;
+    // stroke: $color-secondary;
+  }
+  &__plate.open &__line--1 {
+    transform: translateX(18px) translateY(-3px) rotate(-45deg) scale(0.7);
+  }
+  &__plate.open &__line--2 {
+    transform: translateX(-18px) translateY(-3px) rotate(45deg) scale(0.7);
+  }
+  &__plate.open &__line--3 {
+    transform: translateY(0px) rotate(45deg) scale(0.7);
+  }
+  &__plate.open &__line--4 {
+    transform: translateY(0px) rotate(-45deg) scale(0.7);
+  }
+  &__plate.open &__line--5 {
+    transform: translateX(18px) translateY(3px) rotate(45deg) scale(0.7);
+  }
+  &__plate.open &__line--6 {
+    transform: translateX(-18px) translateY(3px) rotate(-45deg) scale(0.7);
+  }
+  &__plate.open &__x {
+    transition: transform 400ms 100ms;
+    transform: scale(1);
+  }
+
+  &__nav {
+    visibility: hidden;
+    transform: translateX(100%);
+    position: fixed;
+    right: 0;
+    width: 60rem;
+    height: 100vh;
+    z-index: 20;
+    background-color: $color-tertiary;
+    pointer-events: none;
+    &.open {
+      pointer-events: auto;
+    }
+  }
+
+  &__list {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    list-style-type: none;
+    text-align: center;
+    width: 100%;
+  }
+
+  &__item {
+    margin: 1rem;
+    margin-right: 10rem;
+    opacity: 0;
+    transform: translateX(200px);
+  }
+
+  &__link {
+    &:link,
+    &:visited {
+      display: inline-block;
+      font-family: $h2-font-family;
+      font-size: $h2-font-size;
+      padding: 1rem 2rem;
+      color: $color-font-dark;
+      text-decoration: none;
+      text-transform: uppercase;
+
+      span {
+        margin-right: 1.5rem;
+        display: inline-block;
+      }
+    }
+
+    &:hover,
+    &:active {
+      color: $color-secondary;
+    }
+  }
+}

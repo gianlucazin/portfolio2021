@@ -1,3 +1,5 @@
+import Navigation from './Navigation';
+
 const Header = () => {
   return (
     <div className="header">
@@ -6,7 +8,7 @@ const Header = () => {
           <ion-icon name="logo-github" className="social__icon"></ion-icon>
         </a>
 
-        <a href="" className="social__link">
+        <a href="https://github.com/gianlucas90" className="social__link">
           <ion-icon name="logo-youtube" className="social__icon"></ion-icon>
         </a>
 
@@ -17,7 +19,7 @@ const Header = () => {
           <ion-icon name="logo-linkedin" className="social__icon"></ion-icon>
         </a>
       </ul>
-      <div className="header__menu"></div>
+      <Navigation />
     </div>
   );
 };

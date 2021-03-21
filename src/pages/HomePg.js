@@ -17,7 +17,7 @@ const HomePg = () => {
       <Projects />
       <Competencies />
       <About />
-      <Contact />
+      {/* <Contact /> */}
       <Footer />
     </React.Fragment>
   );

@@ -5,12 +5,11 @@ const About = () => {
       <div className="about__video">
         <div className="container">
           <iframe
-            // width="560"
-            // height="315"
+            title="About me"
             src="https://www.youtube.com/embed/gA6ppby3JC8"
-            frameborder="0"
+            frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
+            allowFullScreen
             className="about__iframe"
           ></iframe>
         </div>
