@@ -104,10 +104,31 @@
   }
 
   &__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin: 1rem;
     margin-right: 10rem;
     opacity: 0;
     transform: translateX(200px);
+  }
+
+  &__braket {
+    // visibility: hidden;
+    opacity: 0;
+    display: block;
+    width: 2rem;
+    height: 100%;
+    margin-bottom: 0.5rem;
+    transform: translateX(-30px) rotateY(-90deg);
+    transform-origin: 'left';
+
+    &--right {
+      transform: rotate(180deg) translateX(-30px) rotateY(90deg);
+      transform-origin: 'left';
+
+      // transform: ;
+    }
   }
 
   &__link {
@@ -131,5 +152,9 @@
     &:active {
       color: $color-secondary;
     }
+
+    // &:hover .navigation__braket {
+    //   transform: translateX(100px);
+    // }
   }
 }
