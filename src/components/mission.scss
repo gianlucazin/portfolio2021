@@ -3,9 +3,15 @@
   height: 100vh;
   background-color: $color-secondary;
   display: flex;
+  text-align: left;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
+
+  .heading-primary {
+    margin-bottom: 0;
+  }
   span {
     color: $color-font-dark;
   }

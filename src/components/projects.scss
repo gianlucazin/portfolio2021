@@ -1,12 +1,8 @@
 .projects {
-  background-color: $color-background-desk;
-  overflow: hidden;
-
   &__wave {
-    // overflow: hidden;
+    background-color: $color-secondary;
     position: relative;
     z-index: 1;
-    transform: rotate(180deg);
     svg {
       position: relative;
       display: block;
@@ -15,36 +11,20 @@
     }
   }
   &__wave-fill {
-    fill: $color-secondary;
+    // fill: $color-secondary;
+    fill: $color-tertiary;
   }
 
-  &__desk {
-    margin-top: 30rem;
-    position: relative;
-    height: 100vh;
-    background-color: $color-background-desk;
-  }
-
-  &__img-desk {
-    // margin-top: -70rem;
-    // width: 80%;
-    position: absolute;
-    bottom: 0;
-  }
-
-  &__controls {
-    position: relative;
-    z-index: 1;
-    display: flex;
-    justify-content: space-between;
+  &__table {
+    margin-top: 6rem;
+    margin-bottom: 12rem;
+    // margin: 6rem auto;
   }
 
   &__select {
-    margin-right: -16rem;
-    display: flex;
-    align-items: center;
-    .paragraph {
-      margin-right: 2rem;
-    }
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 26rem);
+    grid-gap: 5rem;
   }
 }

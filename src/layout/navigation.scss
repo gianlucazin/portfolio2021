@@ -78,7 +78,7 @@
   }
 
   &__nav {
-    visibility: hidden;
+    // visibility: hidden;
     transform: translateX(100%);
     position: fixed;
     right: 0;
@@ -121,13 +121,9 @@
     height: 100%;
     margin-bottom: 0.5rem;
     transform: translateX(-30px) rotateY(-90deg);
-    transform-origin: 'left';
 
     &--right {
       transform: rotate(180deg) translateX(-30px) rotateY(90deg);
-      transform-origin: 'left';
-
-      // transform: ;
     }
   }
 

@@ -5,20 +5,25 @@ import HomePg from './pages/HomePg';
 import ProjectPg from './pages/ProjectPg';
 import Route from './components/Route';
 
+import Test from './components/Test';
+
+const routes = projectsData.map((projectData) => {
+  return (
+    <Route key={projectData.general.url} path={`/${projectData.general.url}`}>
+      <ProjectPg projectData={projectData} />
+    </Route>
+  );
+});
+
 const App = () => {
   return (
     <div>
       <Route path="/">
-        <HomePg />
+        <HomePg projectsData={projectsData} />
       </Route>
-      <Route path="/passepartout">
-        <ProjectPg projectData={projectsData[0]} />
-      </Route>
-      <Route path="/srtendaggi">
-        <ProjectPg projectData={projectsData[1]} />
-      </Route>
-      <Route path="/hivenue">
-        <ProjectPg projectData={projectsData[2]} />
+      {routes}
+      <Route path="/test">
+        <Test />
       </Route>
     </div>
   );

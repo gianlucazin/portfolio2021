@@ -1,7 +1,9 @@
+// General
 @import './variables';
 @import './base';
 @import './typography';
 @import './utilities';
+@import './layout.scss';
 
 // Layout
 @import '../layout/header.scss';
@@ -13,7 +15,6 @@
 @import '../components/scroll.scss';
 @import '../components/mission.scss';
 @import '../components/projects.scss';
-@import '../components/buttonRnd.scss';
 @import '../components/buttonLaunch.scss';
 @import '../components/competencies.scss';
 @import '../components/about.scss';
@@ -21,3 +22,4 @@
 @import '../components/introduction.scss';
 @import '../components/gallery.scss';
 @import '../components/development.scss';
+@import '../components/card.scss';

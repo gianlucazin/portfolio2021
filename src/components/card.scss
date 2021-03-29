@@ -1,0 +1,67 @@
+.card {
+  background-color: $color-primary;
+  padding: 2.5rem;
+  border-radius: $border-radious;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: $color-font-light;
+  border-radius: $border-radious;
+  text-decoration: none;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+
+  &__preview {
+    overflow: hidden;
+    height: 100%;
+    background-color: violet;
+  }
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: $border-radious;
+  }
+
+  &__details {
+    margin-top: 2.5rem;
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+    color: rgb(218, 218, 218);
+    font-weight: bold;
+  }
+
+  &__more {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+  }
+
+  &__btn {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: transparent;
+    color: $color-accent-1;
+    width: 15rem;
+    padding: 1.5rem;
+    border: 2px solid $color-accent-1;
+    font-family: $p-font-family;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  .label {
+    font-size: 1.2rem;
+  }
+}

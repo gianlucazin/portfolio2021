@@ -1,10 +1,13 @@
-import desk from './../img/desk.svg';
-import ButtonRnd from './ButtonRnd';
+import Card from './Card';
 
-const Projects = () => {
+const Projects = ({ projectsData, waves }) => {
+  const renderedCards = projectsData.map((project, i) => {
+    return <Card key={i} projectData={project} />;
+  });
+
   return (
     <div className="projects">
-      <div className="projects__wave">
+      <div ref={waves} className="projects__wave">
         <svg
           data-name="Layer 1"
           xmlns="http://www.w3.org/2000/svg"
@@ -17,20 +20,11 @@ const Projects = () => {
           ></path>
         </svg>
       </div>
-      <div className="projects__desk">
-        <div className="projects__controls u-max-width-small">
-          <h2 id="projects" className="heading-secondary ">
-            Selected Projects.
-          </h2>
-          <div className="projects__select">
-            <p className="paragraph">Select:</p>
-            <ButtonRnd value="1" projectName="passepartout" />
-            <ButtonRnd value="2" projectName="srtendaggi" />
-            <ButtonRnd value="3" projectName="hivenue" />
-            <ButtonRnd value="4" projectName="localrama" />
-          </div>
-        </div>
-        <img src={desk} alt="" className="projects__img-desk" />
+      <div className="projects__table u-max-width-medium">
+        <h1 id="projects" className="heading-primary u-center-text">
+          Selected Projects.
+        </h1>
+        <div className="projects__select">{renderedCards}</div>
       </div>
     </div>
   );

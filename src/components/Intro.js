@@ -3,7 +3,7 @@ import Scroll from './Scroll';
 
 const Intro = () => {
   return (
-    <div className="intro">
+    <section className="intro">
       <img src={logo} alt="Gianluca Zin logo" className="intro__logo" />
       <h1 className="heading-primary">Gianluca Zin</h1>
       <p className="paragraph">Fullstack Developer & UI/UX Designer</p>
@@ -21,7 +21,7 @@ const Intro = () => {
         </a>
       </div>
       <Scroll />
-    </div>
+    </section>
   );
 };
 

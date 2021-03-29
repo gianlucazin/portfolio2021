@@ -1,10 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
-import ReactDOM from 'react-dom';
-import { gsap, Back, Expo, Power4 } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { gsap, Back } from 'gsap';
 import braket from './../img/braket.svg';
-
-gsap.registerPlugin(ScrollTrigger);
 
 // Config
 const links = [
@@ -59,7 +55,8 @@ const Navigation = () => {
 
   // Open menu animation
   useEffect(() => {
-    openMenuAnim.to(nav.current, { x: '10rem', visibility: 'visible' });
+    // openMenuAnim.set(nav.current, { visibility: 'visible' });
+    openMenuAnim.to(nav.current, { x: '10rem' });
     links.map((link, index) => {
       openMenuAnim.to(
         items.current[index].current,
@@ -105,21 +102,21 @@ const Navigation = () => {
       items.current[index].current.addEventListener('mouseleave', hoverReverse);
     });
 
-    return () => {
-      links.map((link, index) => {
-        const hoverPlay = () => {};
-        const hoverReverse = () => {};
+    // return () => {
+    //   links.map((link, index) => {
+    //     const hoverPlay = () => {};
+    //     const hoverReverse = () => {};
 
-        items.current[index].current.removeEventListener(
-          'mouseenter',
-          hoverPlay
-        );
-        items.current[index].current.removeEventListener(
-          'mouseleave',
-          hoverReverse
-        );
-      });
-    };
+    //     items.current[index].current.removeEventListener(
+    //       'mouseenter',
+    //       hoverPlay
+    //     );
+    //     items.current[index].current.removeEventListener(
+    //       'mouseleave',
+    //       hoverReverse
+    //     );
+    //   });
+    // };
   }, []);
 
   const openMenu = () => {
