@@ -8,21 +8,26 @@
   align-items: center;
   &__mouse {
     position: relative;
-    width: 20px;
+    width: 22px;
     height: 38px;
-    border-radius: 13px;
-    border: 1px solid $color-tertiary;
-    margin-bottom: 1rem;
+    border-radius: 10px;
+    border: 2px solid $color-tertiary;
+    margin-bottom: 1.2rem;
   }
 
   &__wheel {
     position: absolute;
     background-color: $color-accent-1;
-    width: 6px;
-    height: 11px;
+    width: 4px;
+    height: 6px;
     border-radius: 13px;
     top: 5px;
     left: 50%;
     transform: translateX(-50%);
+  }
+
+  .label {
+    font-size: 1.1rem;
+    color: $color-font-light;
   }
 }

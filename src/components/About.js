@@ -87,7 +87,9 @@ const About = () => {
 
       <div className="about__aboutme">
         <div className="u-max-width-small">
-          <h1 className="heading-primary u-center-text">About me.</h1>
+          <h1 className="heading-primary u-center-text">
+            About me<span>.</span>
+          </h1>
           <div className="about__video u-max-width-small">
             <div className="container">
               <iframe

@@ -20,7 +20,7 @@
     margin-top: 2rem;
     width: 100%;
     display: block;
-    border-radius: 1rem;
+    border-radius: $border-radious;
     padding: 2rem;
     border: none;
 
@@ -45,16 +45,21 @@
     color: $color-font-dark;
     font-size: 1.6rem;
     font-family: $p-font-family;
-    border-radius: 1rem;
+    text-transform: uppercase;
+    border-radius: $border-radious;
     border: none;
-    box-shadow: $btn-shadow-normal;
+    box-shadow: $shadow-normal;
     cursor: pointer;
     transition: all 0.3s;
 
     &:hover,
     &:active {
       transform: scale(0.99);
-      box-shadow: $btn-shadow-pressed;
+      box-shadow: $shadow-pressed;
     }
+  }
+
+  span {
+    color: $color-accent-2;
   }
 }

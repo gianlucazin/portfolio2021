@@ -26,4 +26,8 @@
     grid-template-rows: repeat(2, 26rem);
     grid-gap: 5rem;
   }
+
+  span {
+    color: $color-accent-2;
+  }
 }

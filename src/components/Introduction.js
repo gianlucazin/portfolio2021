@@ -6,7 +6,10 @@ const Introduction = ({ projectData }) => {
 
   return (
     <div className="introduction u-max-width-big">
-      <h1 className="heading-primary u-center-text">{general.title}.</h1>
+      <h1 className="heading-primary u-center-text">
+        {general.title}
+        <span>.</span>
+      </h1>
       <ButtonLaunch />
       <h2 className="heading-secondary">Overview.</h2>
       <p className="paragraph">{overview.overview}</p>

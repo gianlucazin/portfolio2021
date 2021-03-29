@@ -13,7 +13,7 @@ const ProjectPg = ({ projectData }) => {
       <Gallery title="Screenshots" images={projectData.screenshots} />
       <Gallery title="Design" images={projectData.design} />
       <Development />
-      {/* <Contact /> */}
+      <Contact />
       <Footer />
     </div>
   );

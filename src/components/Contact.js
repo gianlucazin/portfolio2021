@@ -16,7 +16,7 @@ const Contact = () => {
       </div> */}
       <div className="container u-max-width-small">
         <h1 id="contact" className="heading-primary u-center-text">
-          Contact.
+          Contact<span>.</span>
         </h1>
         <form className="contact__form" onSubmit="">
           <label for="name" className="label contact__label">

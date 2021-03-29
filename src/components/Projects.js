@@ -22,7 +22,7 @@ const Projects = ({ projectsData, waves }) => {
       </div>
       <div className="projects__table u-max-width-medium">
         <h1 id="projects" className="heading-primary u-center-text">
-          Selected Projects.
+          Selected Projects<span>.</span>
         </h1>
         <div className="projects__select">{renderedCards}</div>
       </div>

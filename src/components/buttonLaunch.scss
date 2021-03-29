@@ -7,7 +7,7 @@
   font-size: $h2-font-size;
   font-family: $h2-font-family;
   color: $color-font-light;
-  box-shadow: $btn-shadow-normal;
+  box-shadow: $shadow-normal;
   cursor: pointer;
   transition: all 0.3s;
   margin: 6rem 0;
@@ -15,6 +15,6 @@
   &:hover,
   &:active {
     transform: scale(0.96);
-    box-shadow: $btn-shadow-pressed;
+    box-shadow: $shadow-pressed;
   }
 }
