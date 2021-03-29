@@ -1,33 +1,18 @@
 .contact {
-  padding-bottom: 10rem;
-  background-color: $color-secondary;
-  &__wave {
-    background-color: $color-tertiary;
-    // overflow: hidden;
-    position: relative;
-    z-index: 1;
-    transform: scaleX(-1);
-    svg {
-      position: relative;
-      display: block;
-      width: calc(161% + 1.3px);
-      height: 255px;
-    }
-  }
-
-  &__wave-fill {
-    fill: $color-secondary;
-  }
+  padding: 10rem 0;
+  background-color: $color-grey;
 
   &__form {
-    color: $color-font-light;
-    // background-color: green;
+    color: $color-font-dark;
+    text-transform: uppercase;
   }
   &__label {
-    font-size: 1.6rem;
     width: 100%;
     display: block;
-    margin-bottom: 2.5rem;
+    line-height: 0.3;
+    &:not(:first-child) {
+      margin-top: 2.5rem;
+    }
   }
 
   &__input,
@@ -57,7 +42,7 @@
     width: 100%;
     height: 5rem;
     background-color: $color-accent-2;
-    color: $color-font-light;
+    color: $color-font-dark;
     font-size: 1.6rem;
     font-family: $p-font-family;
     border-radius: 1rem;

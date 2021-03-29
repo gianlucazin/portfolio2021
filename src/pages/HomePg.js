@@ -63,9 +63,9 @@ const HomePg = ({ projectsData }) => {
         <Mission mission={mission} />
       </div>
       <Projects projectsData={projectsData} waves={waves} />
-      <Competencies />
       <About />
-      {/* <Contact /> */}
+      <Competencies />
+      <Contact />
       <Footer />
     </div>
   );

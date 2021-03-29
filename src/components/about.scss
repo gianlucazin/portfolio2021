@@ -1,18 +1,63 @@
 .about {
-  margin-top: 10rem;
-  margin-bottom: 10rem;
+  margin-top: 25rem;
+
+  .keyboard {
+    background-color: $color-secondary;
+    width: 100%;
+
+    &__shape {
+      margin-top: -6rem;
+      margin-bottom: -6rem;
+    }
+
+    .cls-2,
+    .cls-5 {
+      fill: #fff;
+    }
+    .cls-3 {
+      fill: $color-secondary;
+    }
+    .cls-4,
+    .cls-5 {
+      font-size: 22.7px;
+      font-family: Slenco-Black, Slenco;
+      font-weight: 800;
+    }
+    .back {
+      fill: $color-grey;
+    }
+  }
+  &__aboutme {
+    background-color: $color-primary;
+    color: $color-font-light;
+    padding-bottom: 10rem;
+  }
+
+  &__wave {
+    background-color: $color-secondary;
+    .shape-fill {
+      fill: $color-primary;
+    }
+    svg {
+      position: relative;
+      display: block;
+      width: calc(177% + 1.3px);
+      height: 215px;
+    }
+  }
 
   &__video {
     max-width: 100%;
     margin: 0px auto;
     margin-bottom: 2.5rem;
+
+    .container {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0px;
+    }
   }
 
-  .container {
-    position: relative;
-    padding-bottom: 56.25%;
-    height: 0px;
-  }
   &__iframe {
     position: absolute;
     top: 0px;

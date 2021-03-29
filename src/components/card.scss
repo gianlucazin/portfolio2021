@@ -1,5 +1,5 @@
 .card {
-  background-color: $color-primary;
+  background-color: $color-secondary;
   padding: 2.5rem;
   border-radius: $border-radious;
   display: flex;
@@ -51,10 +51,10 @@
     top: 50%;
     transform: translate(-50%, -50%);
     background-color: transparent;
-    color: $color-accent-1;
+    color: $color-accent-2;
     width: 15rem;
     padding: 1.5rem;
-    border: 2px solid $color-accent-1;
+    border: 2px solid $color-accent-2;
     font-family: $p-font-family;
     text-transform: uppercase;
     font-weight: bold;

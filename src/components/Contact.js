@@ -1,7 +1,7 @@
 const Contact = () => {
   return (
     <div className="contact">
-      <div className="contact__wave">
+      {/* <div className="contact__wave">
         <svg
           data-name="Layer 1"
           xmlns="http://www.w3.org/2000/svg"
@@ -13,44 +13,44 @@ const Contact = () => {
             className="contact__wave-fill"
           ></path>
         </svg>
-      </div>
+      </div> */}
       <div className="container u-max-width-small">
-        <h2 id="contact" className="heading-secondary">
+        <h1 id="contact" className="heading-primary u-center-text">
           Contact.
-        </h2>
+        </h1>
         <form className="contact__form" onSubmit="">
-          <label for="name" className="contact__label">
-            Name
-            <input
-              className="contact__input"
-              type="text"
-              value=""
-              onChange=""
-              name="name"
-            />
+          <label for="name" className="label contact__label">
+            Name:
           </label>
-          <label for="email" className="contact__label">
-            Email
-            <input
-              className="contact__input"
-              type="email"
-              value=""
-              onChange=""
-              name="email"
-            />
+          <input
+            className="contact__input"
+            type="text"
+            value=""
+            onChange=""
+            name="name"
+          />
+          <label for="email" className="label contact__label">
+            Email:
           </label>
-          <label for="message" className="contact__label">
-            Message
-            <textarea
-              className="contact__text-area"
-              type="textarea"
-              value=""
-              cols="40"
-              rows="8"
-              onChange=""
-              name="message"
-            />
+          <input
+            className="contact__input"
+            type="email"
+            value=""
+            onChange=""
+            name="email"
+          />
+          <label for="message" className="label contact__label">
+            Message:
           </label>
+          <textarea
+            className="contact__text-area"
+            type="textarea"
+            value=""
+            cols="40"
+            rows="8"
+            onChange=""
+            name="message"
+          />
           <input type="submit" className="contact__btn" value="Send Message" />
         </form>
       </div>
