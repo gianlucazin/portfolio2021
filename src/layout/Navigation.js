@@ -57,54 +57,13 @@ const Navigation = () => {
 
   return (
     <div className="navigation">
-      <div
-        className={`navigation__plate ${menuOpen ? 'open' : ''}`}
-        onClick={onClickMenuHandler}
-      >
-        <svg
-          className="navigation__burger"
-          version="1.1"
-          height="100"
-          width="100"
-          viewBox="0 0 100 100"
-        >
-          <path
-            className="navigation__line navigation__line--1"
-            d="M 50,35 H 30"
-          />
-          <path
-            className="navigation__line navigation__line--2"
-            d="M 50,35 H 70"
-          />
-          <path
-            className="navigation__line navigation__line--3"
-            d="M 50,50 H 30"
-          />
-          <path
-            className="navigation__line navigation__line--4"
-            d="M 50,50 H 70"
-          />
-          <path
-            className="navigation__line navigation__line--5"
-            d="M 50,65 H 30"
-          />
-          <path
-            className="navigation__line navigation__line--6"
-            d="M 50,65 H 70"
-          />
-        </svg>
-        <svg
-          className="navigation__x"
-          version="1.1"
-          height="100"
-          width="100"
-          viewBox="0 0 100 100"
-        >
-          <path className="navigation__line" d="M 34,32 L 66,68" />
-          <path className="navigation__line" d="M 66,32 L 34,68" />
-        </svg>
+      <div class="menu-icon" onClick={onClickMenuHandler}>
+        <input class="menu-icon__cheeckbox" type="checkbox" />
+        <div>
+          <span></span>
+          <span></span>
+        </div>
       </div>
-
       <nav ref={nav} className={`navigation__nav ${menuOpen ? 'open' : ''}`}>
         <ul className="navigation__list">{renderedList}</ul>
       </nav>
