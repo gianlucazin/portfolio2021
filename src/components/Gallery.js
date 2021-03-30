@@ -1,9 +1,8 @@
 const Gallery = ({ title, images }) => {
   const renderedImages = images.map((image, index) => {
     return (
-      <div className="gallery__item">
+      <div key={index} className="gallery__item">
         <img
-          key={index}
           src={image}
           alt={`Gallery item ${index}`}
           className="gallery__img"

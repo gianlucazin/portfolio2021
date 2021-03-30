@@ -2,26 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import { gsap, Back } from 'gsap';
 
 import NavItem from './NavItem';
-
-// Config
-const links = [
-  {
-    label: 'Projects',
-    url: './#projects',
-  },
-  {
-    label: 'Competencies',
-    url: './#competencies',
-  },
-  {
-    label: 'About',
-    url: './#about',
-  },
-  {
-    label: 'Contact',
-    url: './#contact',
-  },
-];
+import { links } from '../data/links';
 
 const Navigation = () => {
   // States
@@ -57,8 +38,8 @@ const Navigation = () => {
 
   return (
     <div className="navigation">
-      <div class="menu-icon" onClick={onClickMenuHandler}>
-        <input class="menu-icon__cheeckbox" type="checkbox" />
+      <div className="menu-icon" onClick={onClickMenuHandler}>
+        <input className="menu-icon__cheeckbox" type="checkbox" />
         <div>
           <span></span>
           <span></span>

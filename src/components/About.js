@@ -15,7 +15,7 @@ const About = () => {
   }, []);
 
   return (
-    <div id="about" className="about">
+    <div className="about">
       <div className="keyboard">
         <div className="container u-max-width-small">
           <svg
@@ -101,7 +101,7 @@ const About = () => {
         </div>
       </div>
 
-      <div className="about__aboutme">
+      <div id="about" className="about__aboutme">
         <div className="u-max-width-small">
           <h1 className="heading-primary u-center-text">
             About me<span>.</span>

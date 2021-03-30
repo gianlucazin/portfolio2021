@@ -1,5 +1,8 @@
 import { useRef, useEffect } from 'react';
 import { gsap, Back } from 'gsap';
+
+import { HashLink } from 'react-router-hash-link';
+// import Link from '../components/Link';
 import braket from './../img/braket.svg';
 
 const NavItem = ({ link }) => {
@@ -22,6 +25,12 @@ const NavItem = ({ link }) => {
     );
   }, []);
 
+  // const onClickHandler = (e) => {
+  //   e.preventDefault();
+  //   const target = e.target.getAttribute('href');
+  //   gsap.to(window, { scrollTo: target, duration: 1 });
+  // };
+
   const onMouseEnterHandler = () => hoverTween.current.play();
   const onMouseLeaveHandler = () => hoverTween.current.reverse();
 
@@ -38,9 +47,14 @@ const NavItem = ({ link }) => {
         alt="braket"
         className="navigation__braket"
       />
-      <a href={link.url} className="navigation__link">
+      {/* <a onClick={onClickHandler} href={link.url} className="navigation__link">
         {link.label}
-      </a>
+      </a> */}
+
+      <HashLink to={link.url} className="navigation__link">
+        {link.label}
+      </HashLink>
+
       <img
         src={braket}
         ref={bracketRightRef}

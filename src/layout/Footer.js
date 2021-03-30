@@ -1,35 +1,37 @@
 import logo from './../img/logo.svg';
+import { HashLink } from 'react-router-hash-link';
+import { links } from '../data/links';
 
 const Footer = () => {
   return (
     <div className="footer">
       <ul className="footer__list">
         <li className="footer__item">
-          <a href="./#projects" className="footer__link">
-            Projects
-          </a>
+          <HashLink to={links[0].url} className="footer__link">
+            {links[0].label}
+          </HashLink>
         </li>
         <li className="footer__item">
-          <a href="./#competencies" className="footer__link">
-            Competencies
-          </a>
+          <HashLink to={links[1].url} className="footer__link">
+            {links[1].label}
+          </HashLink>
         </li>
 
         <li className="footer__logo">
-          <a href="./" className="footer__link">
+          <HashLink to="./" className="footer__link">
             <img src={logo} alt="logo Gianluca Zin" className="footer__img" />
-          </a>
+          </HashLink>
           <p className="footer__copyright">© Copyright 2021</p>
         </li>
         <li className="footer__item">
-          <a href="./#about" className="footer__link">
-            About
-          </a>
+          <HashLink to={links[2].url} className="footer__link">
+            {links[2].label}
+          </HashLink>
         </li>
         <li className="footer__item">
-          <a href="#contact" className="footer__link">
-            Contact
-          </a>
+          <HashLink to={links[3].url} className="footer__link">
+            {links[3].label}
+          </HashLink>
         </li>
       </ul>
     </div>
