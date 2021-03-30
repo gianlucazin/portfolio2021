@@ -1,9 +1,25 @@
+import { useRef, useEffect } from 'react';
+import { gsap } from 'gsap';
+
 const About = () => {
+  let keyboard = useRef();
+
+  useEffect(() => {
+    gsap.to(keyboard.current, {
+      y: 15,
+      repeat: -1,
+      yoyo: true,
+      duration: 2,
+      ease: 'linear',
+    });
+  }, []);
+
   return (
     <div id="about" className="about">
       <div className="keyboard">
         <div className="container u-max-width-small">
           <svg
+            ref={keyboard}
             className="keyboard__shape"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 843 322.87"

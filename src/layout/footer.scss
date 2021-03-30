@@ -16,6 +16,7 @@
     grid-template-columns: repeat(5, 1fr);
     justify-content: center;
     align-items: center;
+    text-transform: uppercase;
   }
   &__item {
     text-align: center;
@@ -26,6 +27,14 @@
     text-decoration: none;
     font-size: $label-font-size;
     color: $color-font-dark;
+    transition: all 0.2s;
+    font-weight: bold;
+
+    &:hover,
+    &:active {
+      color: $color-font-dark-active;
+      // color: red;
+    }
   }
 
   &__logo {
@@ -46,6 +55,7 @@
 
   &__copyright {
     color: $color-font-dark;
+    font-weight: bold;
     font-size: 1.2rem;
   }
 }
