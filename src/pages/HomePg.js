@@ -3,18 +3,15 @@ import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-import Header from '../layout/Header';
 import Intro from '../components/Intro';
 import Mission from '../components/Mission';
 import Projects from '../components/Projects';
 import Competencies from '../components/Competencies';
 import About from '../components/About';
-import Contact from '../components/Contact';
-import Footer from '../layout/Footer';
 
 gsap.registerPlugin(ScrollTrigger);
 
-const HomePg = ({ projectsData }) => {
+const HomePg = ({ data }) => {
   let containerHor = useRef();
   let mission = useRef();
   let waves = useRef();
@@ -32,11 +29,14 @@ const HomePg = ({ projectsData }) => {
 
     ScrollTrigger.create({
       trigger: containerHor.current,
+      id: 'trigger1',
       pin: true,
       animation: tl1,
       scrub: 1,
       start: 'top top',
       end: () => containerHor.current.offsetWidth / 3,
+      onEnter: () => console.log('start'),
+      onLeave: () => console.log('end'),
     });
 
     const tl2 = gsap.timeline().to(mission.current, {
@@ -48,25 +48,31 @@ const HomePg = ({ projectsData }) => {
 
     ScrollTrigger.create({
       trigger: waves.current,
+      id: 'trigger2',
       animation: tl2,
       scrub: true,
       end: 'top center',
       markers: true,
     });
+
+    return () => {
+      // Kill the triggers
+      tl1.kill(true);
+      tl2.kill(true);
+      ScrollTrigger.getById('trigger1').kill(true);
+      ScrollTrigger.getById('trigger2').kill(true);
+    };
   }, []);
 
   return (
     <div>
-      <Header />
       <div ref={containerHor} className="containerHor">
         <Intro />
         <Mission mission={mission} />
       </div>
-      <Projects projectsData={projectsData} waves={waves} />
+      <Projects data={data} waves={waves} />
       <About />
       <Competencies />
-      {/* <Contact /> */}
-      <Footer />
     </div>
   );
 };

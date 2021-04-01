@@ -1,7 +1,7 @@
 import Card from './Card';
 
-const Projects = ({ projectsData, waves }) => {
-  const renderedCards = projectsData.map((project, i) => {
+const Projects = ({ data, waves }) => {
+  const renderedCards = data.map((project, i) => {
     return <Card key={i} projectData={project} />;
   });
 

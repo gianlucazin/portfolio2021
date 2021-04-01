@@ -1,8 +1,8 @@
 import ButtonLaunch from './ButtonLaunch';
 
-const Introduction = ({ projectData }) => {
-  const general = projectData.general;
-  const overview = projectData.overview;
+const Introduction = ({ data }) => {
+  const general = data.general;
+  const overview = data.overview;
 
   return (
     <div className="introduction u-max-width-big">

@@ -1,3 +1,5 @@
+import Scroll from './Scroll';
+
 const Mission = ({ mission }) => {
   return (
     <section className="mission">
@@ -9,6 +11,7 @@ const Mission = ({ mission }) => {
           <span>.</span>
         </h1>
       </div>
+      <Scroll />
     </section>
   );
 };

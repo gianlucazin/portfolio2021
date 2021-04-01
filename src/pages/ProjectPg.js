@@ -1,20 +1,27 @@
-import Header from '../layout/Header';
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
+
 import Introduction from '../components/Introduction';
 import Gallery from '../components/Gallery';
-import Contact from '../components/Contact';
-import Footer from '../layout/Footer';
 import Development from '../components/Development';
 
-const ProjectPg = ({ projectData }) => {
+const ProjectPg = ({ data }) => {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    if (pathname !== '/') {
+      setTimeout(function () {
+        window.scrollTo(0, 0);
+      }, 500);
+    }
+  }, [pathname]);
+
   return (
     <div>
-      <Header />
-      <Introduction projectData={projectData} />
-      <Gallery title="Screenshots" images={projectData.screenshots} />
-      <Gallery title="Design" images={projectData.design} />
+      <Introduction data={data} />
+      <Gallery title="Screenshots" images={data.screenshots} />
+      <Gallery title="Design" images={data.design} />
       <Development />
-      {/* <Contact /> */}
-      <Footer />
     </div>
   );
 };
