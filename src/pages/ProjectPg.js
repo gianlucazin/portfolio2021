@@ -12,7 +12,7 @@ const ProjectPg = ({ data }) => {
     if (pathname !== '/') {
       setTimeout(function () {
         window.scrollTo(0, 0);
-      }, 500);
+      }, 800);
     }
   }, [pathname]);
 

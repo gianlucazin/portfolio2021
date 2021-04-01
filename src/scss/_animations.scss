@@ -3,12 +3,16 @@
 }
 .page-enter-active {
   opacity: 1;
-  transition: opacity 400ms;
+  transition: opacity 1000ms;
+  transition-delay: 1000ms;
+}
+.page-enter-done {
 }
 .page-exit {
-  opacity: 1;
 }
 .page-exit-active {
-  opacity: 0;
-  transition: opacity 400ms;
+  opacity: 1;
+  transition: opacity 1000ms;
+}
+.page-exit-done {
 }

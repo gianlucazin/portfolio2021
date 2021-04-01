@@ -1,0 +1,16 @@
+.transitionPg {
+  display: flex;
+  position: fixed;
+  z-index: 10;
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  left: 0;
+  margin: 0;
+  pointer-events: none;
+  li {
+    transform: scaleY(0);
+    background: $color-accent-2;
+    width: 20%;
+  }
+}

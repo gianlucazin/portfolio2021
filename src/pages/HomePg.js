@@ -35,8 +35,6 @@ const HomePg = ({ data }) => {
       scrub: 1,
       start: 'top top',
       end: () => containerHor.current.offsetWidth / 3,
-      onEnter: () => console.log('start'),
-      onLeave: () => console.log('end'),
     });
 
     const tl2 = gsap.timeline().to(mission.current, {

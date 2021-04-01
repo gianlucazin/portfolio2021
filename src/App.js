@@ -1,4 +1,5 @@
 import './scss/main.scss';
+import { useRef, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { CSSTransition } from 'react-transition-group';
 import { gsap } from 'gsap';
@@ -8,6 +9,7 @@ import Contact from './components/Contact';
 import Footer from './layout/Footer';
 import HomePg from './pages/HomePg';
 import ProjectPg from './pages/ProjectPg';
+import TransitionPg from './components/TransitionPg';
 import Test from './components/Test';
 
 const routes = [
@@ -22,31 +24,51 @@ const routes = [
 ];
 
 const App = () => {
-  const onEnter = (node) => {
-    //
-    console.log(node);
-  };
-  const onExit = (node) => {
-    //
-    console.log(node);
-  };
+  let transitionTl = useRef();
+
+  useEffect(() => {
+    transitionTl.current = gsap
+      .timeline({ paused: true })
+      .to('ul.transitionPg li', {
+        scaleY: 1,
+        transformOrigin: 'bottom left',
+        stagger: {
+          amount: 0.4,
+        },
+      })
+      .to('ul.transitionPg li', {
+        scaleY: 0,
+        transformOrigin: 'bottom left',
+        stagger: {
+          amount: 0.2,
+        },
+        delay: 0.1,
+      });
+  }, []);
+
+  const onEnter = () => transitionTl.current.play();
+  const onExit = () => transitionTl.current.restart();
 
   return (
     <Router>
       <>
         <Header />
+        <TransitionPg />
         {routes.map(({ path, Component, prop }) => (
           <Route key={path} exact path={path}>
             {({ match }) => (
               <CSSTransition
                 in={match != null}
-                timeout={1000}
-                classNames="page"
+                timeout={{
+                  enter: 2000,
+                  exit: 1000,
+                }}
                 unmountOnExit
+                classNames="page"
+                onEnter={onEnter}
+                onExit={onExit}
               >
-                <div className="page">
-                  <Component data={prop} />
-                </div>
+                <Component data={prop} />
               </CSSTransition>
             )}
           </Route>
