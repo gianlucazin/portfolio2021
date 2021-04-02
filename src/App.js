@@ -73,7 +73,7 @@ const App = () => {
             )}
           </Route>
         ))}
-        {/* <Contact /> */}
+        <Contact />
         <Footer />
       </>
     </Router>

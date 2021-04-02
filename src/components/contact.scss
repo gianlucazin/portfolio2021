@@ -23,6 +23,8 @@
     border-radius: $border-radious;
     padding: 2rem;
     border: none;
+    font-family: $label-font-family;
+    font-size: $label-font-size;
 
     &:focus {
       outline: none;

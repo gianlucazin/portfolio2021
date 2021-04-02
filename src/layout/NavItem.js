@@ -1,9 +1,11 @@
 import { useRef, useEffect } from 'react';
 import { gsap, Back } from 'gsap';
+import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 
 import { HashLink } from 'react-router-hash-link';
 // import Link from '../components/Link';
 import braket from './../img/braket.svg';
+gsap.registerPlugin(ScrollToPlugin);
 
 const NavItem = ({ link }) => {
   let hoverTween = useRef();
@@ -25,11 +27,26 @@ const NavItem = ({ link }) => {
     );
   }, []);
 
-  // const onClickHandler = (e) => {
-  //   e.preventDefault();
-  //   const target = e.target.getAttribute('href');
-  //   gsap.to(window, { scrollTo: target, duration: 1 });
-  // };
+  function myAutoKillFunction() {
+    alert('autoKill');
+  }
+
+  const onClickHandler = (e) => {
+    // console.log(e.target.hash);
+    e.preventDefault();
+    // const target = e.target.hash;
+
+    // console.log(target);
+    gsap.to(window, {
+      duration: 0.5,
+      ease: 'linear',
+      scrollTo: {
+        y: e.target.hash,
+        autoKill: true,
+        onAutoKill: myAutoKillFunction,
+      },
+    });
+  };
 
   const onMouseEnterHandler = () => hoverTween.current.play();
   const onMouseLeaveHandler = () => hoverTween.current.reverse();
@@ -51,7 +68,11 @@ const NavItem = ({ link }) => {
         {link.label}
       </a> */}
 
-      <HashLink to={link.url} className="navigation__link">
+      <HashLink
+        to={link.url}
+        className="navigation__link"
+        onClick={onClickHandler}
+      >
         {link.label}
       </HashLink>
 
