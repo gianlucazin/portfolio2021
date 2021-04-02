@@ -25,6 +25,7 @@ const HomePg = ({ data }) => {
         ease: 'power2.in',
         duration: 2,
       })
+      .set('.header', { mixBlendMode: 'difference' }, '<')
       .to(containerHor.current, { ease: 'none', duration: 4 });
 
     ScrollTrigger.create({
@@ -37,12 +38,19 @@ const HomePg = ({ data }) => {
       end: () => containerHor.current.offsetWidth / 3,
     });
 
-    const tl2 = gsap.timeline().to(mission.current, {
-      y: 500,
-      x: 100,
-      opacity: 0,
-      ease: 'power1.in',
-    });
+    const tl2 = gsap
+      .timeline()
+      .to('.scroll', { opacity: 0, y: 200, opacity: 0, duration: 0.5 })
+      .to(
+        mission.current,
+        {
+          y: 500,
+          x: 100,
+          opacity: 0,
+          ease: 'power1.in',
+        },
+        0
+      );
 
     ScrollTrigger.create({
       trigger: waves.current,

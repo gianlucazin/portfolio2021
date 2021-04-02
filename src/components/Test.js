@@ -12,34 +12,34 @@ const Test = () => {
   const panel1 = useRef();
   const panel2 = useRef();
 
-  useEffect(() => {
-    let container = document.querySelector('.container-horizontal');
+  // useEffect(() => {
+  //   let container = document.querySelector('.container-horizontal');
 
-    const tl = gsap
-      .timeline()
-      .to(container, {
-        ease: 'none',
-        duration: 3,
-      })
-      .to(container, {
-        x: () => -window.innerWidth,
-        ease: 'power4.in',
-        duration: 1,
-      })
-      .to(container, {
-        ease: 'none',
-        duration: 3,
-      });
+  //   const tl = gsap
+  //     .timeline()
+  //     .to(container, {
+  //       ease: 'none',
+  //       duration: 3,
+  //     })
+  //     .to(container, {
+  //       x: () => -window.innerWidth,
+  //       ease: 'power4.in',
+  //       duration: 1,
+  //     })
+  //     .to(container, {
+  //       ease: 'none',
+  //       duration: 3,
+  //     });
 
-    ScrollTrigger.create({
-      trigger: container,
-      pin: true,
-      animation: tl,
-      scrub: 1,
-      start: 'top top',
-      end: () => container.offsetWidth / 2,
-    });
-  }, []);
+  //   ScrollTrigger.create({
+  //     trigger: container,
+  //     pin: true,
+  //     animation: tl,
+  //     scrub: 1,
+  //     start: 'top top',
+  //     end: () => container.offsetWidth / 2,
+  //   });
+  // }, []);
 
   return (
     <div className="parent">
@@ -61,7 +61,14 @@ const Test = () => {
         <div className="panel blue" ref={panel2}>
           2
         </div>
+        <div className="panel orange" ref={panel2}>
+          3
+        </div>
+        <a href="https://github.com/gianlucas90" className="test1">
+          <ion-icon name="logo-github" className="test1"></ion-icon>
+        </a>
       </div>
+      <h3 className="test2 heading-tertiary">Test</h3>
 
       <div className="panel green">4</div>
     </div>

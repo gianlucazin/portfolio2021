@@ -1,4 +1,5 @@
 .projects {
+  background-color: $color-tertiary;
   &__wave {
     background-color: $color-secondary;
     position: relative;
@@ -16,7 +17,7 @@
   }
 
   &__table {
-    margin-bottom: 12rem;
+    // margin-bottom: 12rem;
     // margin: 6rem auto;
   }
 

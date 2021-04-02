@@ -19,6 +19,8 @@ const Navigation = () => {
         paused: true,
         reversed: true,
       })
+      .set('.header', { mixBlendMode: 'unset' })
+      .set('.menu-icon span', { backgroundColor: 'black' })
       .to(nav.current, { x: '10rem' })
       .to(
         '.navigation__item',

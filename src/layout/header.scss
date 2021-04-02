@@ -4,15 +4,21 @@
   top: 0;
   left: 0;
   width: 100%;
+  // mix-blend-mode: difference;
 
   .social {
     margin: 3rem;
     // width: fit-content;
     &__link {
-      color: $color-font-light;
+      // color: $color-font-light;
+      color: #fff;
       &:not(:last-child) {
         margin-right: 1.2rem;
       }
+    }
+
+    &__icon {
+      mix-blend-mode: difference;
     }
 
     ion-icon {

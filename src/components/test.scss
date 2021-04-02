@@ -1,5 +1,6 @@
 .parent {
   font-size: 10rem;
+  position: relative;
 }
 
 .panel {
@@ -18,4 +19,21 @@
 }
 .green {
   background-color: greenyellow;
+}
+
+.test1 {
+  position: fixed;
+  top: 4rem;
+  left: 45rem;
+  font-size: 5rem;
+  color: #fff;
+  mix-blend-mode: difference;
+}
+.test2 {
+  position: fixed;
+  top: 4rem;
+  left: 50rem;
+  font-size: 5rem;
+  color: #fff;
+  mix-blend-mode: difference;
 }
