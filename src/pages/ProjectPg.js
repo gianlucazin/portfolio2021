@@ -17,12 +17,12 @@ const ProjectPg = ({ data }) => {
   }, [pathname]);
 
   return (
-    <div>
+    <main>
       <Introduction data={data} />
       <Gallery title="Screenshots" images={data.screenshots} />
       <Gallery title="Design" images={data.design} />
       <Development />
-    </div>
+    </main>
   );
 };
 

@@ -15,9 +15,11 @@ const HomePg = ({ data }) => {
   let containerHor = useRef();
   let mission = useRef();
   let waves = useRef();
+  let tl1 = useRef();
+  let tl2 = useRef();
 
   useEffect(() => {
-    const tl1 = gsap
+    tl1.current = gsap
       .timeline()
       .to(containerHor.current, { ease: 'none', duration: 2 })
       .to(containerHor.current, {
@@ -25,22 +27,22 @@ const HomePg = ({ data }) => {
         ease: 'power2.in',
         duration: 2,
       })
-      .set('.header', { mixBlendMode: 'difference' }, '<')
+      .set(['.header', '.burger'], { mixBlendMode: 'difference' }, '<')
       .to(containerHor.current, { ease: 'none', duration: 4 });
 
     ScrollTrigger.create({
       trigger: containerHor.current,
       id: 'trigger1',
       pin: true,
-      animation: tl1,
+      animation: tl1.current,
       scrub: 1,
       start: 'top top',
       end: () => containerHor.current.offsetWidth / 3,
     });
 
-    const tl2 = gsap
+    tl2.current = gsap
       .timeline()
-      .to('.scroll', { opacity: 0, y: 200, opacity: 0, duration: 0.5 })
+      .to('.scroll', { opacity: 0, y: 200, duration: 0.2 })
       .to(
         mission.current,
         {
@@ -55,23 +57,22 @@ const HomePg = ({ data }) => {
     ScrollTrigger.create({
       trigger: waves.current,
       id: 'trigger2',
-      animation: tl2,
+      animation: tl2.current,
       scrub: true,
       end: 'top center',
-      markers: true,
     });
 
     return () => {
       // Kill the triggers
-      tl1.kill(true);
-      tl2.kill(true);
+      tl1.current.kill(true);
+      tl2.current.kill(true);
       ScrollTrigger.getById('trigger1').kill(true);
       ScrollTrigger.getById('trigger2').kill(true);
     };
   }, []);
 
   return (
-    <div>
+    <main>
       <div ref={containerHor} className="containerHor">
         <Intro />
         <Mission mission={mission} />
@@ -79,7 +80,7 @@ const HomePg = ({ data }) => {
       <Projects data={data} waves={waves} />
       <About />
       <Competencies />
-    </div>
+    </main>
   );
 };
 

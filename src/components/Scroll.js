@@ -1,7 +1,7 @@
 import { useRef, useEffect } from 'react';
 import { gsap } from 'gsap';
 
-const Scroll = () => {
+const Scroll = ({ scrref }) => {
   const mouseRef = useRef();
   const wheelRef = useRef();
 
@@ -25,7 +25,7 @@ const Scroll = () => {
   }, []);
 
   return (
-    <div className="scroll">
+    <div ref={scrref} className="scroll">
       <div ref={mouseRef} className="scroll__mouse">
         <div ref={wheelRef} className="scroll__wheel"></div>
       </div>

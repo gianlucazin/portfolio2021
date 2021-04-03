@@ -4,7 +4,7 @@ import { links } from '../data/links';
 
 const Footer = () => {
   return (
-    <div className="footer">
+    <footer className="footer">
       <ul className="footer__list">
         <li className="footer__item">
           <HashLink to={links[0].url} className="footer__link">
@@ -34,7 +34,7 @@ const Footer = () => {
           </HashLink>
         </li>
       </ul>
-    </div>
+    </footer>
   );
 };
 

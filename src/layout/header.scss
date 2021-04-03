@@ -1,24 +1,18 @@
 .header {
+  display: block;
   position: fixed;
   z-index: 10;
   top: 0;
   left: 0;
-  width: 100%;
-  // mix-blend-mode: difference;
 
   .social {
     margin: 3rem;
-    // width: fit-content;
+    visibility: hidden;
     &__link {
-      // color: $color-font-light;
-      color: #fff;
+      color: $color-font-light;
       &:not(:last-child) {
         margin-right: 1.2rem;
       }
-    }
-
-    &__icon {
-      mix-blend-mode: difference;
     }
 
     ion-icon {
