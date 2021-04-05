@@ -1,9 +1,14 @@
 .gallery {
   width: 100%;
-  // overflow: hidden;
   padding-top: 8rem;
   padding-bottom: 8rem;
   height: 70vh;
+  @include respond(tab-land) {
+    height: 40vh;
+  }
+  @include respond(phone) {
+    height: 60vh;
+  }
 
   .container {
     display: flex;
@@ -16,14 +21,8 @@
     display: flex;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
-
     scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
-
-    /*
-    scroll-snap-points-x: repeat(300px);
-    scroll-snap-type: mandatory;
-    */
 
     &::-webkit-scrollbar {
       width: 2rem;
@@ -41,6 +40,8 @@
 
   &__item {
     height: 95%;
+    flex-shrink: 0;
+    max-width: 50rem;
     border-radius: 4px;
     &:not(:last-child) {
       margin-right: 2rem;
@@ -51,6 +52,7 @@
     display: block;
     height: 100%;
     width: 100%;
+    object-fit: cover;
     border-radius: 4px;
   }
 

@@ -17,11 +17,9 @@ body {
   font-family: $h1-font-family;
   font-size: $h1-font-size;
   margin-bottom: 5rem;
-
-  // @include respond(tab-port) {
-  //   font-size: 5rem;
-  //   line-height: normal;
-  // }
+  @include respond(tab-port) {
+    font-size: 4rem;
+  }
 }
 
 .heading-secondary {

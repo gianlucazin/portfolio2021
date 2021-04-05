@@ -3,7 +3,7 @@ import { links } from '../data/links';
 
 const Navigation = ({ menuOpen, onClickMenuHandler }) => {
   const renderedList = links.map((link, i) => {
-    return <NavItem key={i} link={link} />;
+    return <NavItem closemenu={onClickMenuHandler} key={i} link={link} />;
   });
 
   return (

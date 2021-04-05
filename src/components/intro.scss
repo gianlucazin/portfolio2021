@@ -35,8 +35,8 @@
     }
 
     .draw {
-      stroke: #fff;
-      stroke-width: 4px;
+      stroke: #f25c68;
+      stroke-width: 5px;
       stroke-dasharray: 750;
       stroke-dashoffset: 750;
     }
@@ -88,6 +88,8 @@
 
   .heading-primary {
     margin-bottom: 0.3rem;
-    // visibility: hidden;
+    @include respond(tab-port) {
+      font-size: 6rem;
+    }
   }
 }

@@ -7,7 +7,7 @@ import { HashLink } from 'react-router-hash-link';
 import braket from './../img/braket.svg';
 gsap.registerPlugin(ScrollToPlugin);
 
-const NavItem = ({ link }) => {
+const NavItem = ({ closemenu, link }) => {
   let hoverTween = useRef();
   let itemRef = useRef();
   let bracketLeftRef = useRef();
@@ -32,15 +32,12 @@ const NavItem = ({ link }) => {
   }
 
   const onClickHandler = (e) => {
-    // console.log(e.target.hash);
     e.preventDefault();
-    // const target = e.target.hash;
-
-    // console.log(target);
+    closemenu();
     gsap.to(window, {
-      duration: 0.5,
       ease: 'linear',
       scrollTo: {
+        duration: 0.5,
         y: e.target.hash,
         autoKill: true,
         onAutoKill: myAutoKillFunction,
@@ -64,10 +61,6 @@ const NavItem = ({ link }) => {
         alt="braket"
         className="navigation__braket"
       />
-      {/* <a onClick={onClickHandler} href={link.url} className="navigation__link">
-        {link.label}
-      </a> */}
-
       <HashLink
         to={link.url}
         className="navigation__link"

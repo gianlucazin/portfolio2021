@@ -1,11 +1,15 @@
 .introduction {
-  margin: 10rem auto;
+  margin-top: 10rem;
+  margin-bottom: 10rem;
+
   &__info {
     display: grid;
     grid-template-columns: 1fr 2fr;
     grid-gap: 2rem;
     margin: 4rem auto;
-    // background-color: red;
+    @include respond(phone) {
+      grid-template-columns: 1fr;
+    }
   }
 
   &__col-1 {

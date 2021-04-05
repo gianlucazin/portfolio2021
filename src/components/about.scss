@@ -1,7 +1,9 @@
 .about {
   background-color: $color-tertiary;
-
   padding-top: 25rem;
+  @include respond(phone) {
+    padding-top: 18rem;
+  }
 
   .keyboard {
     background-color: $color-secondary;
@@ -46,7 +48,13 @@
       position: relative;
       display: block;
       width: calc(177% + 1.3px);
-      height: 215px;
+      height: 21.5rem;
+      @include respond(tab-port) {
+        height: 15rem;
+      }
+      @include respond(phone) {
+        height: 10rem;
+      }
     }
   }
 

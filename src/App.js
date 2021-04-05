@@ -3,12 +3,9 @@ import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css';
 import { useState, useRef, useEffect } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { CSSTransition } from 'react-transition-group';
-import { gsap, Back } from 'gsap';
+import { gsap } from 'gsap';
 import { projectsData } from './data/data.js';
 import Loader from 'react-loader-spinner';
-import Navigation from './layout/Navigation';
-import Burger from './components/Burger';
-import Header from './layout/Header';
 import Contact from './components/Contact';
 import Footer from './layout/Footer';
 import HomePg from './pages/HomePg';
@@ -29,29 +26,11 @@ const routes = [
 
 const App = () => {
   const [loading, setLoading] = useState(true);
-  const [menuOpen, setMenuOpen] = useState(false);
   let transitionTl = useRef();
-  let menuTl = useRef();
 
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
-      // Open menu animation
-      menuTl.current = gsap
-        .timeline({
-          defaults: { duration: 1.5, ease: Back.easeOut.config(2) },
-          paused: true,
-          reversed: true,
-        })
-        // .set('.header', { mixBlendMode: 'unset' })
-        .set('.menu-icon span', { backgroundColor: 'black' })
-        .to('.navigation__overlay', { autoAlpha: 1 })
-        .to('.navigation__nav', { x: '10rem' }, 0)
-        .to(
-          '.navigation__item',
-          { opacity: 1, x: '0', delay: 0.1, stagger: 0.1 },
-          0
-        );
 
       transitionTl.current = gsap
         .timeline({ paused: true })
@@ -73,11 +52,6 @@ const App = () => {
     }, 2000);
   }, []);
 
-  const onClickMenuHandler = () => {
-    !menuOpen ? menuTl.current.play() : menuTl.current.reverse(0.7);
-    setMenuOpen(!menuOpen);
-  };
-
   const onEnter = () => transitionTl.current.play();
   const onExit = () => transitionTl.current.restart();
 
@@ -96,12 +70,6 @@ const App = () => {
           </div>
         ) : (
           <>
-            <Burger onClickMenuHandler={onClickMenuHandler} />
-            <Navigation
-              menuOpen={menuOpen}
-              onClickMenuHandler={onClickMenuHandler}
-            />
-            <Header />
             <TransitionPg />
             {routes.map(({ path, Component, prop }) => (
               <Route key={path} exact path={path}>

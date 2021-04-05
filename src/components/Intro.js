@@ -44,8 +44,8 @@ const Intro = React.forwardRef((props, ref) => {
           visibility: 'hidden',
         }
       )
-      .set(giRef.current, { fill: 'transparent' })
-      .set(zetaRef.current, { fill: 'transparent' })
+      .set(giRef.current, { fill: 'transparent', opacity: 1 })
+      .set(zetaRef.current, { fill: 'transparent', opacity: 1 })
 
       .set(leftRef.current, { x: '-6rem', visibility: 'hidden' })
       .set(rightRef.current, { x: '6rem', visibility: 'hidden' });
@@ -56,7 +56,11 @@ const Intro = React.forwardRef((props, ref) => {
         duration: 2,
       })
       .to([giRef.current, zetaRef.current], { fill: '#fff' }, '-=0.5')
-      .to([giRef.current, zetaRef.current], { strokeWidth: '0px' }, '<')
+      .to(
+        [giRef.current, zetaRef.current],
+        { strokeWidth: '0px', opacity: 0.5 },
+        '<'
+      )
       .to(svgRef.current, { y: 0 })
       .to([leftRef.current, rightRef.current], { x: 0, autoAlpha: 1 })
       .to(

@@ -18,6 +18,10 @@
     background-color: $color-tertiary;
     pointer-events: none;
     // mix-blend-mode: normal !important;
+
+    @include respond(phone) {
+      width: 100%;
+    }
     &.open {
       pointer-events: auto;
     }
@@ -79,6 +83,10 @@
       color: $color-font-dark;
       text-decoration: none;
       text-transform: uppercase;
+
+      @include respond(phone) {
+        font-size: 3rem;
+      }
 
       span {
         margin-right: 1.5rem;

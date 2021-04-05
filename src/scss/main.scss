@@ -1,10 +1,13 @@
 // General
 @import './variables';
+@import './utilities';
 @import './base';
 @import './typography';
-@import './utilities';
 @import './layout.scss';
 @import './animations.scss';
+
+// Pages
+@import '../pages/projectPg.scss';
 
 // Layout
 @import '../layout/header.scss';

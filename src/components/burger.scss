@@ -48,7 +48,7 @@
     }
   }
   &.active,
-  &__cheeckbox:checked + div {
+  &__cheeckbox.open + div {
     span {
       &:first-of-type {
         transform: rotate(45deg);
@@ -63,8 +63,8 @@
 
   &.active:hover span:first-of-type,
   &.active:hover span:last-of-type,
-  &:hover .burger__cheeckbox:checked + div span:first-of-type,
-  &:hover .burger__cheeckbox:checked + div span:last-of-type {
+  &:hover .burger__cheeckbox.open + div span:first-of-type,
+  &:hover .burger__cheeckbox.open + div span:last-of-type {
     width: 22px;
   }
 

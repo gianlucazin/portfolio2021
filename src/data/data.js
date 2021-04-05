@@ -23,8 +23,22 @@ export const projectsData = [
         'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy',
     },
     cover: srtendaggi1,
-    screenshots: [hivenue1, hivenue2],
-    design: [srtendaggi1, srtendaggi2],
+    screenshots: [
+      hivenue1,
+      hivenue2,
+      srtendaggi1,
+      srtendaggi2,
+      srtendaggi2,
+      srtendaggi2,
+    ],
+    design: [
+      hivenue1,
+      hivenue2,
+      srtendaggi1,
+      srtendaggi2,
+      srtendaggi2,
+      srtendaggi2,
+    ],
   },
   {
     general: {

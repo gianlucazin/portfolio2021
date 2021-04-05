@@ -8,7 +8,13 @@
       position: relative;
       display: block;
       width: calc(161% + 1.3px);
-      height: 255px;
+      height: 25.5rem;
+      @include respond(tab-port) {
+        height: 20rem;
+      }
+      @include respond(phone) {
+        height: 10rem;
+      }
     }
   }
   &__wave-fill {
@@ -18,7 +24,9 @@
 
   &__table {
     // margin-bottom: 12rem;
-    // margin: 6rem auto;
+    @include respond(phone) {
+      margin-top: 6rem;
+    }
   }
 
   &__select {
@@ -26,6 +34,14 @@
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 26rem);
     grid-gap: 5rem;
+    @include respond(tab-port) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(3, 26rem);
+    }
+    @include respond(phone) {
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: repeat(6, 30rem);
+    }
   }
 
   span {

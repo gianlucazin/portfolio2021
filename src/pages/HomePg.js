@@ -1,8 +1,10 @@
-import React from 'react';
-import { useEffect, useRef } from 'react';
-import { gsap } from 'gsap';
+import React, { useState, useEffect, useRef } from 'react';
+import { gsap, Back } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
+import Navigation from '../layout/Navigation';
+import Burger from '../components/Burger';
+import Header from '../layout/Header';
 import Intro from '../components/Intro';
 import Mission from '../components/Mission';
 import Projects from '../components/Projects';
@@ -12,6 +14,9 @@ import About from '../components/About';
 gsap.registerPlugin(ScrollTrigger);
 
 const HomePg = ({ data }) => {
+  const [menuOpen, setMenuOpen] = useState(false);
+  let menuTl = useRef();
+
   let containerHor = useRef();
   let mission = useRef();
   let waves = useRef();
@@ -42,7 +47,8 @@ const HomePg = ({ data }) => {
 
     tl2.current = gsap
       .timeline()
-      .to('.scroll', { opacity: 0, y: 200, duration: 0.2 })
+      // .to(mission.current, { ease: 'none', duration: 2 })
+      .to('.scroll', { opacity: 0, y: 200, duration: 0.2 }, 0)
       .to(
         mission.current,
         {
@@ -71,16 +77,50 @@ const HomePg = ({ data }) => {
     };
   }, []);
 
+  useEffect(() => {
+    // Open menu animation
+    menuTl.current = gsap
+      .timeline({
+        defaults: { duration: 1.5, ease: Back.easeOut.config(2) },
+        paused: true,
+        reversed: true,
+      })
+      // .set('.header', { mixBlendMode: 'unset' })
+      .set('.burger span', { backgroundColor: 'black' })
+      .fromTo(
+        '.burger',
+        { mixBlendMode: 'difference' },
+        { mixBlendMode: 'normal', duration: 0 }
+      )
+      .to('.navigation__overlay', { autoAlpha: 1 })
+      .to('.navigation__nav', { x: '10rem' }, 0)
+      .to(
+        '.navigation__item',
+        { opacity: 1, x: '0', delay: 0.1, stagger: 0.1 },
+        0
+      );
+  }, []);
+
+  const onClickMenuHandler = () => {
+    !menuOpen ? menuTl.current.play() : menuTl.current.reverse(0.7);
+    setMenuOpen(!menuOpen);
+  };
+
   return (
-    <main>
-      <div ref={containerHor} className="containerHor">
-        <Intro />
-        <Mission mission={mission} />
-      </div>
-      <Projects data={data} waves={waves} />
-      <About />
-      <Competencies />
-    </main>
+    <>
+      <Burger menuOpen={menuOpen} onClickMenuHandler={onClickMenuHandler} />
+      <Navigation menuOpen={menuOpen} onClickMenuHandler={onClickMenuHandler} />
+      <Header />
+      <main>
+        <div ref={containerHor} className="containerHor">
+          <Intro />
+          <Mission mission={mission} />
+        </div>
+        <Projects data={data} waves={waves} />
+        <About />
+        <Competencies />
+      </main>
+    </>
   );
 };
 
