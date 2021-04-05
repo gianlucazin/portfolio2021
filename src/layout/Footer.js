@@ -1,4 +1,4 @@
-import logo from './../img/logo.svg';
+import logo from './../img/logo-light.svg';
 import { HashLink } from 'react-router-hash-link';
 import { links } from '../data/links';
 
