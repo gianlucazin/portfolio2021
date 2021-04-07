@@ -1,9 +1,7 @@
 import React from 'react';
 import { useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-
 import { gsap } from 'gsap';
-// import Link from './Link';
 
 const Card = (props) => {
   const cardRef = useRef();
