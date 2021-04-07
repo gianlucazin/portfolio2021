@@ -1,6 +1,5 @@
 import React from 'react';
 import { useEffect, useRef } from 'react';
-import { HashLink } from 'react-router-hash-link';
 import { gsap } from 'gsap';
 import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 import Scroll from './Scroll';
@@ -291,29 +290,29 @@ const Intro = React.forwardRef((props, ref) => {
         Fullstack Developer & UI/UX Designer
       </p>
       <div ref={navRef} className="intro__nav">
-        <HashLink
+        <a
           onClick={onClickHandler}
-          to="#about"
+          href="#about"
           className="intro__link heading-tertiary"
         >
           About
-        </HashLink>
+        </a>
         <b className="intro__dividers">/</b>
-        <HashLink
+        <a
           onClick={onClickHandler}
-          to="#projects"
+          href="#projects"
           className="intro__link heading-tertiary"
         >
           Projects
-        </HashLink>
+        </a>
         <b className="intro__dividers">/</b>
-        <HashLink
+        <a
           onClick={onClickHandler}
-          to="#contact"
+          href="#contact"
           className="intro__link heading-tertiary"
         >
           Contact
-        </HashLink>
+        </a>
       </div>
       <Scroll scrref={scrollRef} />
     </section>

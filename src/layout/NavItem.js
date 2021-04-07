@@ -1,9 +1,6 @@
 import { useRef, useEffect } from 'react';
 import { gsap, Back } from 'gsap';
 import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
-
-import { HashLink } from 'react-router-hash-link';
-// import Link from '../components/Link';
 import braket from './../img/braket.svg';
 gsap.registerPlugin(ScrollToPlugin);
 
@@ -27,20 +24,14 @@ const NavItem = ({ closemenu, link }) => {
     );
   }, []);
 
-  function myAutoKillFunction() {
-    alert('autoKill');
-  }
-
   const onClickHandler = (e) => {
     e.preventDefault();
     closemenu();
     gsap.to(window, {
       ease: 'linear',
       scrollTo: {
-        duration: 0.5,
         y: e.target.hash,
         autoKill: true,
-        onAutoKill: myAutoKillFunction,
       },
     });
   };
@@ -61,13 +52,9 @@ const NavItem = ({ closemenu, link }) => {
         alt="braket"
         className="navigation__braket"
       />
-      <HashLink
-        to={link.url}
-        className="navigation__link"
-        onClick={onClickHandler}
-      >
+      <a href={link.url} className="navigation__link" onClick={onClickHandler}>
         {link.label}
-      </HashLink>
+      </a>
 
       <img
         src={braket}

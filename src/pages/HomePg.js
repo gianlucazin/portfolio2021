@@ -10,6 +10,8 @@ import Mission from '../components/Mission';
 import Projects from '../components/Projects';
 import Competencies from '../components/Competencies';
 import About from '../components/About';
+import Contact from '../components/Contact';
+import Footer from '../layout/Footer';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -48,7 +50,7 @@ const HomePg = ({ data }) => {
     tl2.current = gsap
       .timeline()
       // .to(mission.current, { ease: 'none', duration: 2 })
-      .to('.scroll', { opacity: 0, y: 200, duration: 0.2 }, 0)
+      .to('.mission .scroll', { opacity: 0, y: 200, duration: 0.2 }, 0)
       .to(
         mission.current,
         {
@@ -85,13 +87,6 @@ const HomePg = ({ data }) => {
         paused: true,
         reversed: true,
       })
-      // .set('.header', { mixBlendMode: 'unset' })
-      .set('.burger span', { backgroundColor: 'black' })
-      .fromTo(
-        '.burger',
-        { mixBlendMode: 'difference' },
-        { mixBlendMode: 'normal', duration: 0 }
-      )
       .to('.navigation__overlay', { autoAlpha: 1 })
       .to('.navigation__nav', { x: '10rem' }, 0)
       .to(
@@ -107,7 +102,7 @@ const HomePg = ({ data }) => {
   };
 
   return (
-    <>
+    <div className="homePg">
       <Burger menuOpen={menuOpen} onClickMenuHandler={onClickMenuHandler} />
       <Navigation menuOpen={menuOpen} onClickMenuHandler={onClickMenuHandler} />
       <Header />
@@ -119,8 +114,10 @@ const HomePg = ({ data }) => {
         <Projects data={data} waves={waves} />
         <About />
         <Competencies />
+        <Contact />
+        <Footer />
       </main>
-    </>
+    </div>
   );
 };
 
