@@ -1,25 +1,32 @@
-.close {
-  position: fixed;
-  top: 0;
-  right: 0;
-  margin: 5rem;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  color: $color-font-dark;
-  transition: all 0.2s;
-  @include respond(phone) {
-    margin: 3rem;
+.projectPg {
+  .close {
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin: 5rem;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: $color-font-dark;
+    transition: all 0.2s;
+    @include respond(phone) {
+      margin: 3rem;
+    }
+
+    &:active,
+    &:hover,
+    &:focus {
+      color: $color-font-dark-active;
+      outline: none;
+    }
+
+    ion-icon {
+      font-size: 4rem;
+    }
   }
 
-  &:active,
-  &:hover,
-  &:focus {
-    color: $color-font-dark-active;
-    outline: none;
-  }
-
-  ion-icon {
-    font-size: 4rem;
+  .front {
+    visibility: hidden;
+    transform: scale(0.7);
   }
 }

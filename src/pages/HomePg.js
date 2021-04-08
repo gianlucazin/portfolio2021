@@ -18,9 +18,8 @@ gsap.registerPlugin(ScrollTrigger);
 const HomePg = ({ data }) => {
   const [menuOpen, setMenuOpen] = useState(false);
   let menuTl = useRef();
-
   let containerHor = useRef();
-  let mission = useRef();
+  let missionRef = useRef();
   let waves = useRef();
   let tl1 = useRef();
   let tl2 = useRef();
@@ -52,7 +51,7 @@ const HomePg = ({ data }) => {
       // .to(mission.current, { ease: 'none', duration: 2 })
       .to('.mission .scroll', { opacity: 0, y: 200, duration: 0.2 }, 0)
       .to(
-        mission.current,
+        missionRef.current,
         {
           y: 500,
           x: 100,
@@ -109,7 +108,7 @@ const HomePg = ({ data }) => {
       <main>
         <div ref={containerHor} className="containerHor">
           <Intro />
-          <Mission mission={mission} />
+          <Mission missionRef={missionRef} />
         </div>
         <Projects data={data} waves={waves} />
         <About />

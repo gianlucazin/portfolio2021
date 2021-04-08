@@ -10,9 +10,9 @@ const ProjectPg = ({ data }) => {
   const animTl = useRef();
 
   useEffect(() => {
-    animTl.current = gsap.timeline({ paused: true }).from(frontRef.current, {
-      opacity: 0,
-      scale: 0.7,
+    animTl.current = gsap.timeline({ paused: true }).to(frontRef.current, {
+      autoAlpha: 1,
+      scale: 1,
       duration: 0.3,
       ease: 'power2.easeInOut',
     });
