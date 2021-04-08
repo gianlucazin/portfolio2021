@@ -8,7 +8,10 @@ export const projectsData = [
   {
     general: {
       title: 'Passepartout',
-      url: 'passepartout',
+      id: 'passepartout',
+      url: 'www.passepartoutsocial.com',
+      live: true,
+      private: true,
       year: 2018,
     },
     overview: {
@@ -43,7 +46,10 @@ export const projectsData = [
   {
     general: {
       title: 'Srtendaggi',
-      url: 'srtendaggi',
+      id: 'srtendaggi',
+      url: 'www.srtendaggi.it',
+      live: true,
+      private: true,
       year: 2020,
     },
     overview: {
@@ -62,7 +68,10 @@ export const projectsData = [
   {
     general: {
       title: 'Hivenue',
-      url: 'hivenue',
+      id: 'hivenue',
+      url: 'www.hivenue.club',
+      live: true,
+      private: true,
       year: 2021,
     },
     overview: {
@@ -83,7 +92,11 @@ export const projectsData = [
   {
     general: {
       title: 'Portfolio',
-      url: 'portfolio',
+      id: 'portfolio',
+      url: '',
+      live: true,
+      private: false,
+      repository: 'https://github.com/gianlucas90/portfolio2021',
       year: 2021,
     },
     overview: {
@@ -104,7 +117,10 @@ export const projectsData = [
   {
     general: {
       title: 'Blue Neon',
-      url: 'blueneon',
+      id: 'blueneon',
+      url: '',
+      live: false,
+      private: true,
       year: 'Ongoing',
     },
     overview: {
@@ -125,7 +141,10 @@ export const projectsData = [
   {
     general: {
       title: 'Localrama',
-      url: 'localrama',
+      id: 'localrama',
+      url: '',
+      live: false,
+      private: true,
       year: 'Ongoing',
     },
     overview: {

@@ -23,8 +23,8 @@ const Card = (props) => {
   const onMouseEnterHandler = () => cardTween.current.play();
   const onMouseLeaveHandler = () => cardTween.current.reverse();
 
-  return (
-    <Link to={projectData.general.url}>
+  return projectData.general.live ? (
+    <Link to={projectData.general.id}>
       <div
         ref={cardRef}
         onMouseEnter={onMouseEnterHandler}
@@ -43,12 +43,38 @@ const Card = (props) => {
           <p className="label">{projectData.general.year}</p>
         </div>
         <div ref={moreRef} className="card__more">
-          <button href={projectData.general.url} className="card__btn">
+          <button href={projectData.general.id} className="card__btn">
             Learn more
           </button>
         </div>
       </div>
     </Link>
+  ) : (
+    <div>
+      <div
+        ref={cardRef}
+        onMouseEnter={onMouseEnterHandler}
+        onMouseLeave={onMouseLeaveHandler}
+        className="card no-live"
+      >
+        <div ref={previewRef} className="card__preview">
+          <img
+            src={projectData.cover}
+            alt={projectData.general.title}
+            className="card__img"
+          />
+        </div>
+        <div ref={detailsRef} className="card__details">
+          <p className="label">{projectData.general.title}</p>
+          <p className="label">{projectData.general.year}</p>
+        </div>
+        <div ref={moreRef} className="card__more">
+          <button href={projectData.general.id} className="card__btn">
+            Ongoing
+          </button>
+        </div>
+      </div>
+    </div>
   );
 };
 

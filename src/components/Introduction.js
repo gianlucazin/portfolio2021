@@ -10,7 +10,7 @@ const Introduction = ({ data }) => {
         {general.title}
         <span>.</span>
       </h1>
-      <ButtonLaunch />
+      {general.url !== '' ? <ButtonLaunch url={general.url} /> : null}
       <h2 className="heading-secondary">Overview.</h2>
       <p className="paragraph">{overview.overview}</p>
       <div className="introduction__info">

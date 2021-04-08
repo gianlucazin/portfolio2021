@@ -14,6 +14,10 @@
   height: 100%;
   cursor: pointer;
 
+  &.no-live {
+    background-color: #aaa;
+  }
+
   &__preview {
     overflow: hidden;
     height: 100%;

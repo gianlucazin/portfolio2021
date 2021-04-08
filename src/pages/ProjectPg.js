@@ -30,15 +30,15 @@ const ProjectPg = ({ data }) => {
 
   return (
     <main className="projectPg">
+      <button onClick={onClickHandler} className="close">
+        <ion-icon name="close-outline" className="close__icon"></ion-icon>
+      </button>
       <div className="back"></div>
       <div ref={frontRef} className="front">
-        <button onClick={onClickHandler} className="close">
-          <ion-icon name="close-outline" className="close__icon"></ion-icon>
-        </button>
         <Introduction data={data} />
         <Gallery title="Screenshots" images={data.screenshots} />
         <Gallery title="Design" images={data.design} />
-        <Development />
+        <Development general={data.general} />
       </div>
     </main>
   );
