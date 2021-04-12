@@ -3,7 +3,7 @@ const Gallery = ({ title, images }) => {
     return (
       <div key={index} className="gallery__item">
         <img
-          src={image}
+          src={image.default}
           alt={`Gallery item ${index}`}
           className="gallery__img"
         />

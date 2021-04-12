@@ -1,6 +1,6 @@
 import { gsap } from 'gsap';
 import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
-import { links } from '../data/links';
+import { links } from '../data/data';
 import logo from './../img/logo-light.svg';
 
 const onClickHandler = (e) => {

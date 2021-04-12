@@ -1,5 +1,5 @@
 import NavItem from './NavItem';
-import { links } from '../data/links';
+import { links } from '../data/data';
 
 const Navigation = ({ menuOpen, onClickMenuHandler }) => {
   const renderedList = links.map((link, i) => {

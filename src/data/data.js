@@ -1,8 +1,30 @@
-﻿import hivenue1 from './../img/screenshots/hivenue1.png';
-import hivenue2 from './../img/screenshots/hivenue2.png';
+﻿import { imgs } from './images';
 
-import srtendaggi1 from './../img/design/srtendaggi1.png';
-import srtendaggi2 from './../img/design/srtendaggi2.png';
+const passepartout = imgs[0];
+const srtendaggi = imgs[1];
+const hivenue = imgs[2];
+const portfolio = imgs[3];
+const blueneon = imgs[4];
+const localrama = imgs[5];
+
+export const links = [
+  {
+    label: 'Projects',
+    url: '/#projects',
+  },
+  {
+    label: 'Competencies',
+    url: '/#competencies',
+  },
+  {
+    label: 'About',
+    url: '/#about',
+  },
+  {
+    label: 'Contact',
+    url: '#contact',
+  },
+];
 
 export const projectsData = [
   {
@@ -25,23 +47,9 @@ export const projectsData = [
       solution:
         'I started to learn, to continuosly challenge myself and after that to learn again, I discovered that I love programming and the immense impact it has if well used. It is probably the most important project I have worked on so far, since it triggered in myself the desire to learn more.',
     },
-    cover: srtendaggi1,
-    screenshots: [
-      hivenue1,
-      hivenue2,
-      srtendaggi1,
-      srtendaggi2,
-      srtendaggi2,
-      srtendaggi2,
-    ],
-    design: [
-      hivenue1,
-      hivenue2,
-      srtendaggi1,
-      srtendaggi2,
-      srtendaggi2,
-      srtendaggi2,
-    ],
+    cover: passepartout.cover,
+    screenshots: passepartout.screenshots,
+    design: passepartout.design,
   },
   {
     general: {
@@ -63,9 +71,9 @@ export const projectsData = [
       solution:
         'I have decided to design a website that could channel the focus on just a few images using white spaces, soft animations and pale colors. The user needs to experience a relaxing navigation throughout the pages without being overwhelmed by the typical patterns and colors of the average local curtain shop website. I have setup Webpack so to be able to add or remove images easily just by changing the content of specific folders.',
     },
-    cover: hivenue1,
-    screenshots: [hivenue1, hivenue2],
-    design: [srtendaggi1, srtendaggi2],
+    cover: srtendaggi.cover,
+    screenshots: srtendaggi.screenshots,
+    design: srtendaggi.design,
   },
   {
     general: {
@@ -87,9 +95,9 @@ export const projectsData = [
       solution:
         'Since in Laravel the front-end is strictly linked with the back-end I have designed the website considering that it had later to be adapted to a template engine. I have kept the same functionality, improving the design and the front end interactivity. I have used the 7-1 pattern folders structure together with Sass and BEM architecture for modularity, reusability and scalability.',
     },
-    cover: hivenue1,
-    screenshots: [hivenue1, hivenue2],
-    design: [srtendaggi1, srtendaggi2],
+    cover: hivenue.cover,
+    screenshots: hivenue.screenshots,
+    design: hivenue.design,
   },
   {
     general: {
@@ -111,9 +119,9 @@ export const projectsData = [
       solution:
         'I have designed the website giving a simple but pleasant look, using scroll triggered animations I have added interactivity to the user experience. I have connected all of it using the modern front-end technologies I know and which I’d like to learn more.',
     },
-    cover: srtendaggi1,
-    screenshots: [hivenue1, hivenue2],
-    design: [srtendaggi1, srtendaggi2],
+    cover: portfolio.cover,
+    screenshots: portfolio.screenshots,
+    design: portfolio.design,
   },
   {
     general: {
@@ -135,9 +143,9 @@ export const projectsData = [
       solution:
         'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy',
     },
-    cover: srtendaggi2,
-    screenshots: [hivenue1, hivenue2],
-    design: [srtendaggi1, srtendaggi2],
+    cover: blueneon.cover,
+    screenshots: blueneon.screenshots,
+    design: blueneon.design,
   },
   {
     general: {
@@ -159,8 +167,8 @@ export const projectsData = [
       solution:
         'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy',
     },
-    cover: hivenue2,
-    screenshots: [hivenue1, hivenue2],
-    design: [srtendaggi1, srtendaggi2],
+    cover: localrama.cover,
+    screenshots: localrama.screenshots,
+    design: localrama.design,
   },
 ];
