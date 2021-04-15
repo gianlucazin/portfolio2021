@@ -2,6 +2,7 @@ import { useRef, useEffect } from 'react';
 import { gsap, Back } from 'gsap';
 import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 import braket from './../img/braket.svg';
+import ReactGA from 'react-ga';
 gsap.registerPlugin(ScrollToPlugin);
 
 const NavItem = ({ closemenu, link }) => {
@@ -27,10 +28,15 @@ const NavItem = ({ closemenu, link }) => {
   const onClickHandler = (e) => {
     e.preventDefault();
     closemenu();
+    const target = e.target.hash;
+    ReactGA.event({
+      category: 'Burger Menu click',
+      action: 'clicked: ' + target,
+    });
     gsap.to(window, {
       ease: 'linear',
       scrollTo: {
-        y: e.target.hash,
+        y: target,
         autoKill: true,
       },
     });

@@ -3,6 +3,7 @@ import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 import Scroll from './Scroll';
+import ReactGA from 'react-ga';
 
 gsap.registerPlugin(ScrollToPlugin);
 
@@ -23,6 +24,10 @@ const Intro = React.forwardRef((props, ref) => {
   const onClickHandler = (e) => {
     e.preventDefault();
     const target = e.target.hash;
+    ReactGA.event({
+      category: 'Nav Intro click',
+      action: 'clicked: ' + target,
+    });
     gsap.to(window, { scrollTo: target, duration: 1, autoKill: true });
   };
 

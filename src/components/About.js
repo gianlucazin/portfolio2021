@@ -14,6 +14,9 @@ const About = () => {
     });
   }, []);
 
+  const onClickHandler = () => {
+    console.log('clicked');
+  };
   return (
     <div className="about">
       <div className="keyboard">
@@ -107,7 +110,7 @@ const About = () => {
             About me<span>.</span>
           </h1>
           <div className="about__video u-max-width-small">
-            <div className="container">
+            <div onClick={onClickHandler} className="container">
               <iframe
                 title="About me"
                 src="https://www.youtube.com/embed/SEZDpyyyReQ"

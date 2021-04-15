@@ -1,8 +1,19 @@
+import ReactGA from 'react-ga';
+
 const Header = () => {
+  const clickHandler = (e) => {
+    ReactGA.event({
+      category: 'Button click',
+      action: 'clicked: ' + e.target.parentElement.getAttribute('id'),
+    });
+  };
+
   return (
     <div className="header">
       <ul className="social">
         <a
+          id="github"
+          onClick={clickHandler}
           target="_blank"
           rel="noopener noreferrer"
           href="https://github.com/gianlucas90"
@@ -12,6 +23,8 @@ const Header = () => {
         </a>
 
         <a
+          id="youtube"
+          onClick={clickHandler}
           target="_blank"
           rel="noopener noreferrer"
           href="https://www.youtube.com/channel/UCFEbTaaI0L1zaQZCK2H2G2Q"
@@ -21,6 +34,8 @@ const Header = () => {
         </a>
 
         <a
+          id="linkedin"
+          onClick={clickHandler}
           target="_blank"
           rel="noopener noreferrer"
           href="https://www.linkedin.com/in/gianlucazin/"
@@ -28,7 +43,12 @@ const Header = () => {
         >
           <ion-icon name="logo-linkedin" className="social__icon"></ion-icon>
         </a>
-        <a href="mailto: gianlucazin1990@gmail.com" className="social__link">
+        <a
+          id="email"
+          onClick={clickHandler}
+          href="mailto: gianlucazin1990@gmail.com"
+          className="social__link"
+        >
           <ion-icon name="mail" className="social__icon"></ion-icon>
         </a>
       </ul>
