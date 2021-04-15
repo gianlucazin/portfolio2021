@@ -31,7 +31,7 @@ const App = () => {
   }, []);
 
   useEffect(() => {
-    ReactGA.initialize('G-H1ECRCMZ29');
+    ReactGA.initialize('UA-194609669-1');
     // To report page view
     ReactGA.pageview(window.location.pathname + window.location.search);
   }, []);
