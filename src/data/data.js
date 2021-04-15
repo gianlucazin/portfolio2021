@@ -1,4 +1,4 @@
-﻿import { imgs } from './images';
+import { imgs } from './images';
 
 const passepartout = imgs[0];
 const srtendaggi = imgs[1];
