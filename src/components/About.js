@@ -1,5 +1,7 @@
 import { useRef, useEffect } from 'react';
 import { gsap } from 'gsap';
+import ReactGA from 'react-ga';
+import YouTube from 'react-youtube';
 
 const About = () => {
   let keyboard = useRef();
@@ -14,9 +16,21 @@ const About = () => {
     });
   }, []);
 
-  const onClickHandler = () => {
-    console.log('clicked');
+  const onPlayHandler = () => {
+    ReactGA.event({
+      category: 'Video',
+      action: 'played',
+    });
   };
+
+  const opts = {
+    height: '100%',
+    width: '100%',
+    position: 'absolute',
+    top: '0',
+    left: '0',
+  };
+
   return (
     <div className="about">
       <div className="keyboard">
@@ -110,15 +124,12 @@ const About = () => {
             About me<span>.</span>
           </h1>
           <div className="about__video u-max-width-small">
-            <div onClick={onClickHandler} className="container">
-              <iframe
-                title="About me"
-                src="https://www.youtube.com/embed/SEZDpyyyReQ"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                className="about__iframe"
-              ></iframe>
+            <div className="container">
+              <YouTube
+                videoId="SEZDpyyyReQ"
+                opts={opts}
+                onPlay={onPlayHandler}
+              />
             </div>
           </div>
           <p className="paragraph">
