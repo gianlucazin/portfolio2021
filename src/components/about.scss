@@ -78,7 +78,14 @@
     height: 100%;
   }
 
-  span {
+  h1 span {
     color: $color-accent-2;
+  }
+
+  .paragraph {
+    .br {
+      display: block;
+      margin-bottom: 1rem;
+    }
   }
 }

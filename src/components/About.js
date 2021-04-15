@@ -110,7 +110,7 @@ const About = () => {
             <div className="container">
               <iframe
                 title="About me"
-                src="https://www.youtube.com/embed/gA6ppby3JC8"
+                src="https://www.youtube.com/embed/SEZDpyyyReQ"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
@@ -119,13 +119,22 @@ const About = () => {
             </div>
           </div>
           <p className="paragraph">
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-            erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
-            et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
-            Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
-            sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
-            et dolore magna aliquyam erat, sed diam voluptua.
+            <span className="br"></span>
+            Hi I am Gianluca, I am a self-taught web developer based in London.
+            I come from the architecture/design industry therefore I decided to
+            specialise in front-end development. <span className="br"></span>I
+            strive to build immersive and beautiful web applications through
+            carefully crafted code and user-centric design.
+            <span className="br"></span>I am team oriented and get along with
+            others when working in a group setting. I am naturally curious and
+            perpetually working on improving myself one programming problem at a
+            time.
+            <span className="br"></span>I have studied web development during
+            the past years and worked on a few freelance projects, now I feel
+            ready to start a full time job!
+            <span className="br"></span>I am interested in the entire frontend
+            and backend spectrum and working on ambitious projects with positive
+            people. Feel free to contact me!
           </p>
         </div>
       </div>
