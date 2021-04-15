@@ -3,7 +3,6 @@ import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css';
 import { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { gsap } from 'gsap';
-import ReactGA from 'react-ga';
 import { projectsData } from './data/data.js';
 import Loader from 'react-loader-spinner';
 import HomePg from './pages/HomePg';
@@ -28,12 +27,6 @@ const App = () => {
     setTimeout(() => {
       setLoading(false);
     }, 2000);
-  }, []);
-
-  useEffect(() => {
-    ReactGA.initialize('UA-194609669-1');
-    // To report page view
-    ReactGA.pageview(window.location.pathname + window.location.search);
   }, []);
 
   return (

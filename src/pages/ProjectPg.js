@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
+import ReactGA from 'react-ga';
 
 import Introduction from '../components/Introduction';
 import Gallery from '../components/Gallery';
@@ -8,6 +9,12 @@ import Development from '../components/Development';
 const ProjectPg = ({ data }) => {
   const frontRef = useRef();
   const animTl = useRef();
+
+  useEffect(() => {
+    ReactGA.initialize(process.env.REACT_APP_GA_TRACKING_ID);
+    // To report page view
+    ReactGA.pageview(window.location.pathname + window.location.search);
+  }, []);
 
   useEffect(() => {
     animTl.current = gsap.timeline({ paused: true }).to(frontRef.current, {

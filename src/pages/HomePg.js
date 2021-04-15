@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { gsap, Back } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import ReactGA from 'react-ga';
 
 import Navigation from '../layout/Navigation';
 import Burger from '../components/Burger';
@@ -23,6 +24,12 @@ const HomePg = ({ data }) => {
   let waves = useRef();
   let tl1 = useRef();
   let tl2 = useRef();
+
+  useEffect(() => {
+    ReactGA.initialize(process.env.REACT_APP_GA_TRACKING_ID);
+    // To report page view
+    ReactGA.pageview(window.location.pathname + window.location.search);
+  }, []);
 
   useEffect(() => {
     tl1.current = gsap
