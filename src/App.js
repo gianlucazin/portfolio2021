@@ -1,7 +1,7 @@
 import './scss/main.scss';
 import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css';
 import { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Redirect } from 'react-router-dom';
 import { gsap } from 'gsap';
 import { projectsData } from './data/data.js';
 import Loader from 'react-loader-spinner';
@@ -31,6 +31,15 @@ const App = () => {
 
   return (
     <Router>
+      <Route
+        path="/video"
+        component={() => {
+          window.location.href =
+            'https://www.youtube.com/watch?v=SEZDpyyyReQ&ab_channel=GianlucaZin';
+          return null;
+        }}
+      />
+
       <>
         {loading ? (
           <div className="loader">
