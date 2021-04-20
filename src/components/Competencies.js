@@ -8,8 +8,8 @@ const Competencies = () => {
         <p className="paragraph">
           <span className="label">FRONTEND:</span>
           <br />
-          HTML5, CSS3/SCSS, Responsive Web Design, Javascript, JSX, React, JSON,
-          Webpack, D3.js, GSAP.
+          HTML5, CSS3/SCSS, Responsive Web Design, Javascript, JSX, React,
+          Redux, JSON, Webpack, D3.js, GSAP.
         </p>
         <p className="paragraph">
           <span className="label">BACKEND:</span> <br />
