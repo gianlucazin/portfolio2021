@@ -24,7 +24,11 @@ const Card = (props) => {
   const onMouseLeaveHandler = () => cardTween.current.reverse();
 
   return projectData.general.live ? (
-    <Link to={projectData.general.id}>
+    <Link
+      to={{
+        pathname: projectData.general.id,
+      }}
+    >
       <div
         ref={cardRef}
         onMouseEnter={onMouseEnterHandler}

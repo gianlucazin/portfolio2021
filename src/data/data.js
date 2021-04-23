@@ -79,14 +79,14 @@ export const projectsData = [
     general: {
       title: 'Hivenue',
       id: 'hivenue',
-      url: 'www.hivenue.club',
+      url: 'hivenue.herokuapp.com',
       live: true,
       private: true,
       year: 2021,
     },
     overview: {
       overview:
-        'Hivenue is a website where Instagram influencers can connect with possible clients and increase their visibility. The backend was created by a different developer and I had to redesign and integrate a new front-end. The backend is undergoing changes by others so the the link you can visit is still the version before restyling.',
+        'Hivenue is a website where Instagram influencers can connect with possible clients and increase their visibility. The backend was created by a different developer and I had to redesign and integrate a new front-end. The back end is undergoing changes by others so the link you can visit is a temporary solution just to showcase my work.',
       role: 'Front-End Developer',
       technologies: 'Laravel Blade Js Gsap Sass',
       features: 'Blade integration, BEM Architecure, 7-1 Pattern',
