@@ -134,21 +134,13 @@ const About = () => {
           </div>
           <p className="paragraph">
             <span className="br"></span>
-            Hi I am Gianluca, I am a self-taught web developer based in London.
-            I come from the architecture/design industry therefore I decided to
-            specialise in front-end development. <span className="br"></span>I
-            strive to build immersive and beautiful web applications through
-            carefully crafted code and user-centric design.
-            <span className="br"></span>I am team oriented and get along with
-            others when working in a group setting. I am naturally curious and
-            perpetually working on improving myself one programming problem at a
-            time.
-            <span className="br"></span>I have studied web development during
-            the past years and worked on a few freelance projects, now I feel
-            ready to start a full time job!
-            <span className="br"></span>I am interested in the entire frontend
-            and backend spectrum and working on ambitious projects with positive
-            people. Feel free to contact me!
+            From the moment I wrote “Hello World” in the console of my first
+            application, I knew I was hooked into the world of web development.
+            However, development has never been “just a job” for me, it offers
+            an engaging challenge to continually learn and improve my skills in
+            creating high-quality software. What started with a simple “Hello
+            World” has become a full-fledged passion that only gets more
+            exciting as the time goes by.
           </p>
         </div>
       </div>
