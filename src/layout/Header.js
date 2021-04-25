@@ -16,7 +16,7 @@ const Header = () => {
           onClick={clickHandler}
           target="_blank"
           rel="noopener noreferrer"
-          href="https://github.com/gianlucas90"
+          href="https://github.com/gianlucazin"
           className="social__link"
         >
           <ion-icon name="logo-github" className="social__icon"></ion-icon>
